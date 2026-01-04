@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>SAÉ S101 – Reporting & SQL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      background: white;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-top: 40px;
+    }
+
+    .infos {
+      background: #eef2f5;
+      padding: 15px;
+      border-left: 4px solid #2980b9;
+      margin-top: 20px;
+    }
+
+    .image {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .image img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .image p {
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    a.back {
+      display: inline-block;
+      margin-top: 40px;
+      text-decoration: none;
+      color: #2980b9;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>SAÉ S101 – Création de reporting à partir d’un SGBD</h1>
+  <p>BUT Science des Données – Semestre 1</p>
+</header>
+
+<main>
+
+  <div class="infos">
+    <strong>Année :</strong> 2022–2023<br>
+    <strong>Outils :</strong> PostgreSQL, SQL, Metabase<br>
+    <strong>Type :</strong> Projet académique
+  </div>
+
+  <h2>Contexte du projet</h2>
+  <p>
+    Ce projet a été réalisé dans le cadre du BUT 1 Science des Données.
+    L’objectif était de concevoir un environnement de reporting à partir
+    d’une base de données relationnelle contenant des résultats académiques.
+  </p>
+
+  <h2>Objectifs</h2>
+  <ul>
+    <li>Interroger une base de données avec SQL</li>
+    <li>Produire des indicateurs statistiques pertinents</li>
+    <li>Créer des tableaux de bord compréhensibles</li>
+  </ul>
+
+  <h2>Mon rôle et démarche</h2>
+  <p>
+    J’ai installé et configuré PostgreSQL, importé les données puis rédigé
+    des requêtes SQL permettant de calculer des moyennes, écarts-types
+    et répartitions par matière. Ces requêtes ont ensuite été intégrées
+    dans Metabase afin de créer des visualisations interactives.
+  </p>
+
+  <div class="image">
+    <img src="images/sae101/dashboard1.png" alt="Dashboard Metabase">
+    <p>Exemple de tableau de bord réalisé avec Metabase</p>
+  </div>
+
+  <div class="image">
+    <img src="images/sae101/sql.png" alt="Requête SQL">
+    <p>Extrait de requête SQL utilisée pour l’analyse</p>
+  </div>
+
+  <h2>Ce que j’ai appris</h2>
+  <ul>
+    <li>Structurer une analyse de données</li>
+    <li>Écrire des requêtes SQL complexes</li>
+    <li>Transformer des données en outils d’aide à la décision</li>
+    <li>Communiquer des résultats à un public non technique</li>
+  </ul>
+
+  <a href="projets.html" class="back">← Retour aux projets</a>
+
+</main>
+
+</body>
+</html>
