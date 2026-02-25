@@ -1,60 +1,133 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SAÉ S302 – Datawarehouse & BI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {margin: 0; font-family: Arial, sans-serif; background-color: #f4f6f8; color: #333; line-height: 1.6;}
-    header {background-color: #2c3e50; color: white; padding: 40px 20px; text-align: center;}
-    main {max-width: 900px; margin: auto; padding: 40px 20px; background: white;}
-    h2 {color: #2c3e50; margin-top: 40px;}
-    .infos {background: #eef2f5; padding: 15px; border-left: 4px solid #2980b9; margin-top: 20px;}
-    a.back {display: inline-block; margin-top: 40px; text-decoration: none; color: #2980b9; font-weight: bold;}
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div class="topbar">
+    <div class="container inner">
+      <a class="brand" href="index.html">
+        <span class="dot"></span>
+        <span>Abou Diop</span>
+      </a>
 
-<header>
-  <h1>SAÉ S302 – Entrepôt de données et visualisation BI</h1>
-  <p>BUT Science des Données – Semestre 3</p>
-</header>
+      <nav>
+        <a href="index.html#apropos">À propos</a>
+        <a href="index.html#competences">Compétences</a>
+        <a href="projets.html">Projets</a>
+        <a href="alternance.html">Alternance</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
 
-<main>
-  <div class="infos">
-    <strong>Année :</strong> 2023–2024<br>
-    <strong>Outils :</strong> SQL Server, Power BI, SSMS<br>
-    <strong>Type :</strong> Projet académique
+      <a class="btn btn-ghost" href="projets.html">← Retour aux projets</a>
+    </div>
   </div>
 
-  <h2>Contexte du projet</h2>
-  <p>
-    L’objectif de ce projet était de concevoir un entrepôt de données
-    permettant d’analyser les performances d’une entreprise.
-  </p>
+  <main class="container">
+    <section class="pagehead">
+      <div class="wrap">
+        <div class="kicker">BUT Science des Données • Semestre 3</div>
+        <h1>SAÉ S302 — Entrepôt de données et visualisation BI</h1>
+        <p class="subtitle">
+          Conception d’un datawarehouse (schéma en étoile) et création d’un tableau de bord décisionnel sous Power BI.
+        </p>
 
-  <h2>Objectifs</h2>
-  <ul>
-    <li>Créer un schéma en étoile pour une base décisionnelle</li>
-    <li>Mettre en place des tableaux de bord interactifs</li>
-    <li>Faciliter la prise de décision à partir des données</li>
-  </ul>
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="projets.html">Voir tous les projets</a>
+          <a class="btn btn-ghost" href="index.html">Accueil</a>
+        </div>
+      </div>
+    </section>
 
-  <h2>Mon rôle et démarche</h2>
-  <p>
-    J’ai conçu le modèle en étoile, créé les tables de dimension
-    et de faits, puis construit un tableau de bord dans Power BI
-    avec des indicateurs de performance.
-  </p>
+    <section class="grid">
+      <!-- Main content -->
+      <article class="card">
+        <h2>Contexte du projet</h2>
+        <p>
+          L’objectif de ce projet était de concevoir un entrepôt de données
+          permettant d’analyser les performances d’une entreprise.
+        </p>
 
-  <h2>Ce que j’ai appris</h2>
-  <ul>
-    <li>Concevoir une architecture de datawarehouse</li>
-    <li>Relier ETL, SQL et visualisation</li>
-    <li>Communiquer des résultats analytiques de façon claire</li>
-  </ul>
+        <h2>Objectifs</h2>
+        <ul>
+          <li>Créer un schéma en étoile pour une base décisionnelle</li>
+          <li>Mettre en place des tableaux de bord interactifs</li>
+          <li>Faciliter la prise de décision à partir des données</li>
+        </ul>
 
-  <a href="projets.html" class="back">← Retour aux projets</a>
-</main>
+        <h2>Mon rôle et démarche</h2>
+        <p>
+          J’ai conçu le modèle en étoile, créé les tables de dimension
+          et de faits, puis construit un tableau de bord dans Power BI
+          avec des indicateurs de performance.
+        </p>
+
+        <h2>Résultats</h2>
+        <ul>
+          <li>Datawarehouse structuré (faits + dimensions) pour l’analyse</li>
+          <li>Indicateurs clés (KPI) et visualisations interactives</li>
+          <li>Exploration par filtres (période, produit, zone, etc.)</li>
+        </ul>
+
+        <h2>Ce que j’ai appris</h2>
+        <ul>
+          <li>Concevoir une architecture de datawarehouse</li>
+          <li>Relier ETL, SQL et visualisation</li>
+          <li>Communiquer des résultats analytiques de façon claire</li>
+        </ul>
+
+        <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-ghost" href="projets.html">← Retour aux projets</a>
+          <a class="btn btn-ghost" href="index.html#contact">Me contacter →</a>
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="side">
+        <div class="mini">
+          <strong>Infos</strong>
+          <div style="margin-top:10px; color: var(--muted);">
+            <div><b>Année :</b> 2023–2024</div>
+            <div><b>Type :</b> Projet académique</div>
+            <div><b>Outils :</b> SQL Server, Power BI, SSMS</div>
+          </div>
+          <div class="meta">
+            <span class="tag">SQL Server</span>
+            <span class="tag">Schéma étoile</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">KPI</span>
+          </div>
+        </div>
+
+        <div class="mini">
+          <strong>Compétences mobilisées</strong>
+          <ul style="margin-top:10px;">
+            <li>Modélisation décisionnelle</li>
+            <li>Tables de faits & dimensions</li>
+            <li>BI & dataviz</li>
+            <li>Analyse de performance</li>
+          </ul>
+        </div>
+
+        <div class="mini">
+          <strong>Pour améliorer encore</strong>
+          <p style="margin-top:10px;">
+            Quand tu peux, ajoute une capture Power BI + 1 KPI clé (ex : CA, marge, volume).
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div>© 2026 — Abou Diop</div>
+        <div>SAÉ S302 • Datawarehouse & BI</div>
+      </div>
+    </footer>
+  </main>
 </body>
 </html>

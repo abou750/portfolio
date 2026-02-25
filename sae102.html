@@ -1,139 +1,167 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SAÉ S102 – Lecture et écriture de fichiers en Python</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f6f8;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-      background-color: white;
-    }
-
-    h2 {
-      color: #2c3e50;
-      margin-top: 40px;
-    }
-
-    .infos {
-      background-color: #eef2f5;
-      padding: 15px;
-      border-left: 4px solid #2980b9;
-      margin-top: 20px;
-    }
-
-    .image {
-      margin: 30px 0;
-      text-align: center;
-    }
-
-    .image img {
-      max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-
-    .image p {
-      font-size: 0.9em;
-      color: #666;
-    }
-
-    a.back {
-      display: inline-block;
-      margin-top: 40px;
-      text-decoration: none;
-      color: #2980b9;
-      font-weight: bold;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="topbar">
+    <div class="container inner">
+      <a class="brand" href="index.html">
+        <span class="dot"></span>
+        <span>Abou Diop</span>
+      </a>
 
-<header>
-  <h1>SAÉ S102 – Lecture et écriture de fichiers en Python</h1>
-  <p>BUT Science des Données – Semestre 1</p>
-</header>
+      <nav>
+        <a href="index.html#apropos">À propos</a>
+        <a href="index.html#competences">Compétences</a>
+        <a href="projets.html">Projets</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
 
-<main>
-
-  <div class="infos">
-    <strong>Année :</strong> 2022–2023<br>
-    <strong>Outils :</strong> Python, pandas, fichiers CSV<br>
-    <strong>Type :</strong> Projet académique
+      <a class="btn btn-ghost" href="projets.html">← Retour aux projets</a>
+    </div>
   </div>
 
-  <h2>Contexte du projet</h2>
-  <p>
-    Ce projet a été réalisé dans le cadre du BUT 1 Science des Données.
-    Il avait pour objectif de comprendre et d’utiliser des scripts Python
-    permettant de lire, analyser et traiter des données stockées dans des fichiers CSV.
-    Le jeu de données représentait une base client fictive répondant à des besoins métiers.
-  </p>
+  <main class="container">
+    <section class="pagehead">
+      <div class="wrap">
+        <div class="kicker">BUT Science des Données • Semestre 1</div>
+        <h1>SAÉ S102 — Lecture et écriture de fichiers en Python</h1>
+        <p class="subtitle">
+          Manipulation de fichiers CSV avec Python/pandas : lecture, filtrage, nettoyage et export de données.
+        </p>
 
-  <h2>Objectifs</h2>
-  <ul>
-    <li>Comprendre la structure des fichiers CSV</li>
-    <li>Analyser des données à l’aide de Python</li>
-    <li>Appréhender la logique des traitements automatisés</li>
-    <li>Identifier les données manquantes ou incohérentes</li>
-    <li>Produire des fichiers de sortie exploitables</li>
-  </ul>
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="projets.html">Voir tous les projets</a>
+          <a class="btn btn-ghost" href="index.html">Accueil</a>
+        </div>
+      </div>
+    </section>
 
-  <h2>Mon rôle et démarche</h2>
-  <p>
-    Dans ce projet, j’ai travaillé sur la compréhension et l’utilisation de scripts Python
-    destinés à manipuler des fichiers CSV. J’ai analysé la structure des données,
-    compris la logique des traitements réalisés (filtrage, sélection de colonnes,
-    détection de valeurs manquantes) et participé à l’adaptation des scripts
-    aux besoins demandés.
-  </p>
+    <section class="grid">
+      <!-- Main content -->
+      <article class="card">
+        <h2>Contexte du projet</h2>
+        <p>
+          Ce projet a été réalisé dans le cadre du BUT 1 Science des Données.
+          L’objectif était de comprendre et d’utiliser des scripts Python
+          permettant de lire, analyser et traiter des données stockées dans des fichiers CSV.
+          Le jeu de données représentait une base client fictive répondant à des besoins métiers.
+        </p>
 
-  <p>
-    Ce travail m’a permis de mieux comprendre le fonctionnement de la bibliothèque pandas,
-    ainsi que la logique des traitements automatisés de données dans un contexte concret.
-  </p>
+        <h2>Objectifs</h2>
+        <ul>
+          <li>Comprendre la structure des fichiers CSV</li>
+          <li>Analyser des données à l’aide de Python</li>
+          <li>Appréhender la logique des traitements automatisés</li>
+          <li>Identifier les données manquantes ou incohérentes</li>
+          <li>Produire des fichiers de sortie exploitables</li>
+        </ul>
 
-  <div class="image">
-    <img src="images/sae102/csv.png" alt="Traitement de données CSV">
-    <p>Exemple de traitement de données à partir d’un fichier CSV</p>
-  </div>
+        <h2>Mon rôle et démarche</h2>
+        <p>
+          J’ai travaillé sur la compréhension et l’utilisation de scripts Python
+          destinés à manipuler des fichiers CSV. J’ai analysé la structure des données,
+          compris la logique des traitements réalisés (filtrage, sélection de colonnes,
+          détection de valeurs manquantes) et participé à l’adaptation des scripts
+          aux besoins demandés.
+        </p>
 
-  <div class="image">
-    <img src="images/sae102/python.png" alt="Traitement de données en Python">
-    <p>Illustration de la logique de traitement des données en Python</p>
-  </div>
+        <p>
+          Ce travail m’a permis de mieux comprendre le fonctionnement de la bibliothèque pandas,
+          ainsi que la logique des traitements automatisés de données dans un contexte concret.
+        </p>
 
-  <h2>Ce que j’ai appris</h2>
-  <ul>
-    <li>Comprendre la structure et le contenu de fichiers CSV</li>
-    <li>Découvrir la logique de la bibliothèque pandas</li>
-    <li>Appréhender l’automatisation des traitements de données</li>
-    <li>Comprendre l’importance du nettoyage des données</li>
-    <li>Traduire un besoin métier en étapes de traitement</li>
-  </ul>
+        <h2>Résultats</h2>
+        <ul>
+          <li>Chargement et exploration d’un dataset client (CSV)</li>
+          <li>Filtrage / sélection de colonnes selon un besoin</li>
+          <li>Détection de valeurs manquantes et règles simples de nettoyage</li>
+          <li>Export de fichiers “propres” pour usage métier</li>
+        </ul>
 
-  <a href="projets.html" class="back">← Retour aux projets</a>
+        <h2>Illustrations</h2>
 
-</main>
+        <div class="media">
+          <img src="images/sae102/csv.png" alt="Traitement de données CSV"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <div class="placeholder" style="display:none;">
+            (Image à ajouter) Exemple de données CSV / aperçu du fichier.
+          </div>
+          <div class="caption">Exemple de traitement de données à partir d’un fichier CSV</div>
+        </div>
 
+        <div class="media">
+          <img src="images/sae102/python.png" alt="Traitement de données en Python"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <div class="placeholder" style="display:none;">
+            (Image à ajouter) Extrait de script Python/pandas.
+          </div>
+          <div class="caption">Illustration de la logique de traitement des données en Python</div>
+        </div>
+
+        <h2>Ce que j’ai appris</h2>
+        <ul>
+          <li>Comprendre la structure et le contenu de fichiers CSV</li>
+          <li>Découvrir la logique de la bibliothèque pandas</li>
+          <li>Appréhender l’automatisation des traitements de données</li>
+          <li>Comprendre l’importance du nettoyage des données</li>
+          <li>Traduire un besoin métier en étapes de traitement</li>
+        </ul>
+
+        <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-ghost" href="projets.html">← Retour aux projets</a>
+          <a class="btn btn-ghost" href="index.html#contact">Me contacter →</a>
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="side">
+        <div class="mini">
+          <strong>Infos</strong>
+          <div style="margin-top:10px; color: var(--muted);">
+            <div><b>Année :</b> 2022–2023</div>
+            <div><b>Type :</b> Projet académique</div>
+            <div><b>Outils :</b> Python, pandas, CSV</div>
+          </div>
+          <div class="meta">
+            <span class="tag">Python</span>
+            <span class="tag">pandas</span>
+            <span class="tag">CSV</span>
+            <span class="tag">Nettoyage</span>
+          </div>
+        </div>
+
+        <div class="mini">
+          <strong>Compétences mobilisées</strong>
+          <ul style="margin-top:10px;">
+            <li>Lecture / export de fichiers</li>
+            <li>Filtrage & sélection</li>
+            <li>Qualité des données</li>
+            <li>Automatisation simple</li>
+          </ul>
+        </div>
+
+        <div class="mini">
+          <strong>Pour améliorer encore</strong>
+          <p style="margin-top:10px;">
+            Quand tu peux, ajoute 1 exemple concret :
+            “X lignes / Y variables”, ou une règle de nettoyage (ex: valeurs manquantes).
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div>© 2026 — Abou Diop</div>
+        <div>SAÉ S102 • Python & Fichiers</div>
+      </div>
+    </footer>
+  </main>
 </body>
 </html>

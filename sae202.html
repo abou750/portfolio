@@ -1,68 +1,145 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SAÉ S202 – Modélisation de données</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {margin: 0; font-family: Arial, sans-serif; background-color: #f4f6f8; color: #333; line-height: 1.6;}
-    header {background-color: #2c3e50; color: white; padding: 40px 20px; text-align: center;}
-    main {max-width: 900px; margin: auto; padding: 40px 20px; background: white;}
-    h2 {color: #2c3e50; margin-top: 40px;}
-    .infos {background: #eef2f5; padding: 15px; border-left: 4px solid #2980b9; margin-top: 20px;}
-    .image {margin: 30px 0; text-align: center;}
-    .image img {max-width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);}
-    .image p {font-size: 0.9em; color: #666;}
-    a.back {display: inline-block; margin-top: 40px; text-decoration: none; color: #2980b9; font-weight: bold;}
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div class="topbar">
+    <div class="container inner">
+      <a class="brand" href="index.html">
+        <span class="dot"></span>
+        <span>Abou Diop</span>
+      </a>
 
-<header>
-  <h1>SAÉ S202 – Conception et modélisation de bases de données</h1>
-  <p>BUT Science des Données – Semestre 2</p>
-</header>
+      <nav>
+        <a href="index.html#apropos">À propos</a>
+        <a href="index.html#competences">Compétences</a>
+        <a href="projets.html">Projets</a>
+        <a href="alternance.html">Alternance</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
 
-<main>
-  <div class="infos">
-    <strong>Année :</strong> 2022–2023<br>
-    <strong>Outils :</strong> MySQL, MERISE, DBeaver<br>
-    <strong>Type :</strong> Projet académique
+      <a class="btn btn-ghost" href="projets.html">← Retour aux projets</a>
+    </div>
   </div>
 
-  <h2>Contexte du projet</h2>
-  <p>
-    Ce projet portait sur la modélisation et la conception d’une base
-    de données relationnelle à partir d’un cahier des charges précis.
-  </p>
+  <main class="container">
+    <section class="pagehead">
+      <div class="wrap">
+        <div class="kicker">BUT Science des Données • Semestre 2</div>
+        <h1>SAÉ S202 — Conception et modélisation de bases de données</h1>
+        <p class="subtitle">
+          Modélisation (MCD/MLD) à partir d’un cahier des charges, puis implémentation dans un SGBDR avec contraintes d’intégrité.
+        </p>
 
-  <h2>Objectifs</h2>
-  <ul>
-    <li>Réaliser un modèle conceptuel de données (MCD)</li>
-    <li>Traduire le MCD en modèle logique (MLD)</li>
-    <li>Implémenter le modèle dans MySQL</li>
-  </ul>
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="projets.html">Voir tous les projets</a>
+          <a class="btn btn-ghost" href="index.html">Accueil</a>
+        </div>
+      </div>
+    </section>
 
-  <h2>Mon rôle et démarche</h2>
-  <p>
-    J’ai participé à la conception du MCD et du MLD, puis à la création des tables
-    et des relations sous MySQL. J’ai également effectué les tests de cohérence
-    et vérifié les contraintes d’intégrité.
-  </p>
+    <section class="grid">
+      <!-- Main content -->
+      <article class="card">
+        <h2>Contexte du projet</h2>
+        <p>
+          Ce projet portait sur la modélisation et la conception d’une base
+          de données relationnelle à partir d’un cahier des charges précis.
+        </p>
 
-  <div class="image">
-    <img src="images/sae202/mcd.png" alt="Modèle conceptuel de données">
-    <p>Exemple de modèle conceptuel réalisé</p>
-  </div>
+        <h2>Objectifs</h2>
+        <ul>
+          <li>Réaliser un modèle conceptuel de données (MCD)</li>
+          <li>Traduire le MCD en modèle logique (MLD)</li>
+          <li>Implémenter le modèle dans MySQL</li>
+          <li>Tester la cohérence et les contraintes d’intégrité</li>
+        </ul>
 
-  <h2>Ce que j’ai appris</h2>
-  <ul>
-    <li>Structurer les données de manière logique</li>
-    <li>Utiliser la méthode MERISE efficacement</li>
-    <li>Traduire un besoin en modèle relationnel fonctionnel</li>
-  </ul>
+        <h2>Mon rôle et démarche</h2>
+        <p>
+          J’ai participé à la conception du MCD et du MLD, puis à la création des tables
+          et des relations sous MySQL. J’ai également effectué les tests de cohérence
+          et vérifié les contraintes d’intégrité.
+        </p>
 
-  <a href="projets.html" class="back">← Retour aux projets</a>
-</main>
+        <h2>Résultats</h2>
+        <ul>
+          <li>Modèle de données complet (entités, associations, cardinalités)</li>
+          <li>Schéma relationnel prêt à être implémenté (clés primaires/étrangères)</li>
+          <li>Base MySQL fonctionnelle avec tests de cohérence</li>
+        </ul>
+
+        <h2>Illustration</h2>
+        <div class="media">
+          <img src="images/sae202/mcd.png" alt="Modèle conceptuel de données"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <div class="placeholder" style="display:none;">
+            (Image à ajouter) Schéma MCD / MLD du projet.
+          </div>
+          <div class="caption">Exemple de modèle conceptuel réalisé</div>
+        </div>
+
+        <h2>Ce que j’ai appris</h2>
+        <ul>
+          <li>Structurer les données de manière logique</li>
+          <li>Utiliser la méthode MERISE efficacement</li>
+          <li>Traduire un besoin en modèle relationnel fonctionnel</li>
+        </ul>
+
+        <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-ghost" href="projets.html">← Retour aux projets</a>
+          <a class="btn btn-ghost" href="index.html#contact">Me contacter →</a>
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="side">
+        <div class="mini">
+          <strong>Infos</strong>
+          <div style="margin-top:10px; color: var(--muted);">
+            <div><b>Année :</b> 2022–2023</div>
+            <div><b>Type :</b> Projet académique</div>
+            <div><b>Outils :</b> MySQL, MERISE, DBeaver</div>
+          </div>
+          <div class="meta">
+            <span class="tag">MERISE</span>
+            <span class="tag">MCD/MLD</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">DBeaver</span>
+          </div>
+        </div>
+
+        <div class="mini">
+          <strong>Compétences mobilisées</strong>
+          <ul style="margin-top:10px;">
+            <li>Analyse du besoin</li>
+            <li>Modélisation conceptuelle</li>
+            <li>Conception relationnelle</li>
+            <li>Contraintes & intégrité</li>
+          </ul>
+        </div>
+
+        <div class="mini">
+          <strong>Pour améliorer encore</strong>
+          <p style="margin-top:10px;">
+            Ajoute 1 exemple concret : le thème de la BD (ex: festivals),
+            et 1–2 règles de gestion (ex: unicité, relations).
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div>© 2026 — Abou Diop</div>
+        <div>SAÉ S202 • Modélisation de données</div>
+      </div>
+    </footer>
+  </main>
 </body>
 </html>

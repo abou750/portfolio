@@ -1,59 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SAÉ S303 – Séries temporelles</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {margin: 0; font-family: Arial, sans-serif; background-color: #f4f6f8; color: #333; line-height: 1.6;}
-    header {background-color: #2c3e50; color: white; padding: 40px 20px; text-align: center;}
-    main {max-width: 900px; margin: auto; padding: 40px 20px; background: white;}
-    h2 {color: #2c3e50; margin-top: 40px;}
-    .infos {background: #eef2f5; padding: 15px; border-left: 4px solid #2980b9; margin-top: 20px;}
-    a.back {display: inline-block; margin-top: 40px; text-decoration: none; color: #2980b9; font-weight: bold;}
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div class="topbar">
+    <div class="container inner">
+      <a class="brand" href="index.html">
+        <span class="dot"></span>
+        <span>Abou Diop</span>
+      </a>
 
-<header>
-  <h1>SAÉ S303 – Analyse de séries temporelles</h1>
-  <p>BUT Science des Données – Semestre 3</p>
-</header>
+      <nav>
+        <a href="index.html#apropos">À propos</a>
+        <a href="index.html#competences">Compétences</a>
+        <a href="projets.html">Projets</a>
+        <a href="alternance.html">Alternance</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
 
-<main>
-  <div class="infos">
-    <strong>Année :</strong> 2023–2024<br>
-    <strong>Outils :</strong> R, ggplot2, forecast<br>
-    <strong>Type :</strong> Projet académique
+      <a class="btn btn-ghost" href="projets.html">← Retour aux projets</a>
+    </div>
   </div>
 
-  <h2>Contexte du projet</h2>
-  <p>
-    Ce projet consistait à analyser une série temporelle de ventes afin de
-    produire un modèle de prévision à court terme.
-  </p>
+  <main class="container">
+    <section class="pagehead">
+      <div class="wrap">
+        <div class="kicker">BUT Science des Données • Semestre 3</div>
+        <h1>SAÉ S303 — Analyse de séries temporelles</h1>
+        <p class="subtitle">
+          Analyse d’une série temporelle et création d’un modèle de prévision (ARIMA) sous R, avec visualisations et évaluation.
+        </p>
 
-  <h2>Objectifs</h2>
-  <ul>
-    <li>Découper une série temporelle (tendance, saisonnalité, bruit)</li>
-    <li>Tester différents modèles prédictifs</li>
-    <li>Évaluer et interpréter les résultats</li>
-  </ul>
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="projets.html">Voir tous les projets</a>
+          <a class="btn btn-ghost" href="index.html">Accueil</a>
+        </div>
+      </div>
+    </section>
 
-  <h2>Mon rôle</h2>
-  <p>
-    J’ai préparé les données sous R, produit différentes visualisations avec ggplot2
-    et ajusté des modèles ARIMA pour réaliser des prévisions.
-  </p>
+    <section class="grid">
+      <!-- Main content -->
+      <article class="card">
+        <h2>Contexte du projet</h2>
+        <p>
+          Ce projet consistait à analyser une série temporelle de ventes afin de
+          produire un modèle de prévision à court terme.
+        </p>
 
-  <h2>Ce que j’ai appris</h2>
-  <ul>
-    <li>Comprendre les logiques des modèles ARIMA</li>
-    <li>Visualiser et interpréter l’évolution des données</li>
-    <li>Présenter des résultats chiffrés de manière claire</li>
-  </ul>
+        <h2>Objectifs</h2>
+        <ul>
+          <li>Découper une série temporelle (tendance, saisonnalité, bruit)</li>
+          <li>Tester différents modèles prédictifs</li>
+          <li>Évaluer et interpréter les résultats</li>
+        </ul>
 
-  <a href="projets.html" class="back">← Retour aux projets</a>
-</main>
+        <h2>Mon rôle</h2>
+        <p>
+          J’ai préparé les données sous R, produit différentes visualisations avec ggplot2
+          et ajusté des modèles ARIMA pour réaliser des prévisions.
+        </p>
+
+        <h2>Résultats</h2>
+        <ul>
+          <li>Analyse descriptive : tendance + saisonnalité + variabilité</li>
+          <li>Modèle ARIMA ajusté + prévisions à court terme</li>
+          <li>Comparaison et interprétation des résultats</li>
+        </ul>
+
+        <h2>Ce que j’ai appris</h2>
+        <ul>
+          <li>Comprendre les logiques des modèles ARIMA</li>
+          <li>Visualiser et interpréter l’évolution des données</li>
+          <li>Présenter des résultats chiffrés de manière claire</li>
+        </ul>
+
+        <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-ghost" href="projets.html">← Retour aux projets</a>
+          <a class="btn btn-ghost" href="index.html#contact">Me contacter →</a>
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="side">
+        <div class="mini">
+          <strong>Infos</strong>
+          <div style="margin-top:10px; color: var(--muted);">
+            <div><b>Année :</b> 2023–2024</div>
+            <div><b>Type :</b> Projet académique</div>
+            <div><b>Outils :</b> R, ggplot2, forecast</div>
+          </div>
+          <div class="meta">
+            <span class="tag">R</span>
+            <span class="tag">Séries temporelles</span>
+            <span class="tag">ARIMA</span>
+            <span class="tag">Prévision</span>
+          </div>
+        </div>
+
+        <div class="mini">
+          <strong>Compétences mobilisées</strong>
+          <ul style="margin-top:10px;">
+            <li>Préparation de données</li>
+            <li>Dataviz (ggplot2)</li>
+            <li>Modélisation ARIMA</li>
+            <li>Interprétation & synthèse</li>
+          </ul>
+        </div>
+
+        <div class="mini">
+          <strong>Pour améliorer encore</strong>
+          <p style="margin-top:10px;">
+            Ajoute 1 graphique (courbe) + 1 indicateur d’évaluation (ex: MAE/RMSE) quand tu l’auras.
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div>© 2026 — Abou Diop</div>
+        <div>SAÉ S303 • Séries temporelles</div>
+      </div>
+    </footer>
+  </main>
 </body>
 </html>

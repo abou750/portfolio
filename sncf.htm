@@ -1,59 +1,143 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Challenge Dataviz SNCF</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {margin: 0; font-family: Arial, sans-serif; background-color: #f4f6f8; color: #333; line-height: 1.6;}
-    header {background-color: #2c3e50; color: white; padding: 40px 20px; text-align: center;}
-    main {max-width: 900px; margin: auto; padding: 40px 20px; background: white;}
-    h2 {color: #2c3e50; margin-top: 40px;}
-    .infos {background: #eef2f5; padding: 15px; border-left: 4px solid #2980b9; margin-top: 20px;}
-    a.back {display: inline-block; margin-top: 40px; text-decoration: none; color: #2980b9; font-weight: bold;}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Challenge Dataviz – SNCF</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div class="topbar">
+    <div class="container inner">
+      <a class="brand" href="index.html">
+        <span class="dot"></span>
+        <span>Abou Diop</span>
+      </a>
 
-<header>
-  <h1>Challenge Dataviz – SNCF</h1>
-  <p>Concours inter-écoles de visualisation de données</p>
-</header>
+      <nav>
+        <a href="index.html#apropos">À propos</a>
+        <a href="index.html#competences">Compétences</a>
+        <a href="projets.html">Projets</a>
+        <a href="alternance.html">Alternance</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
 
-<main>
-  <div class="infos">
-    <strong>Année :</strong> 2024<br>
-    <strong>Outils :</strong> Power BI, Excel, Canva<br>
-    <strong>Type :</strong> Challenge externe
+      <a class="btn btn-ghost" href="projets.html">← Retour aux projets</a>
+    </div>
   </div>
 
-  <h2>Contexte</h2>
-  <p>
-    Participation au challenge Dataviz organisé par la SNCF portant
-    sur l’analyse des retards et de la satisfaction client.
-  </p>
+  <main class="container">
+    <section class="pagehead">
+      <div class="wrap">
+        <div class="kicker">Challenge externe • 2024</div>
+        <h1>Challenge Dataviz — SNCF</h1>
+        <p class="subtitle">
+          Analyse et visualisation de données ferroviaires (retards, satisfaction) avec Power BI, Excel et un rendu orienté storytelling.
+        </p>
 
-  <h2>Objectifs</h2>
-  <ul>
-    <li>Analyser les causes principales des retards</li>
-    <li>Mettre en forme des visualisations pédagogiques</li>
-    <li>Présenter une synthèse claire et esthétique</li>
-  </ul>
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="projets.html">Voir tous les projets</a>
+          <a class="btn btn-ghost" href="index.html">Accueil</a>
+        </div>
+      </div>
+    </section>
 
-  <h2>Mon rôle</h2>
-  <p>
-    J’ai travaillé sur la préparation des données et la construction des
-    tableaux de bord Power BI ainsi que sur la conception graphique du rendu final.
-  </p>
+    <section class="grid">
+      <!-- Main content -->
+      <article class="card">
+        <h2>Contexte</h2>
+        <p>
+          Participation au challenge Dataviz organisé par la SNCF portant
+          sur l’analyse des retards et de la satisfaction client.
+        </p>
 
-  <h2>Ce que j’ai appris</h2>
-  <ul>
-    <li>Combiner analyse et design pour une bonne communication</li>
-    <li>Travailler en équipe sur un projet de data storytelling</li>
-    <li>Valoriser des données complexes auprès d’un jury non technique</li>
-  </ul>
+        <h2>Objectifs</h2>
+        <ul>
+          <li>Analyser les causes principales des retards</li>
+          <li>Mettre en forme des visualisations pédagogiques</li>
+          <li>Présenter une synthèse claire et esthétique</li>
+        </ul>
 
-  <a href="projets.html" class="back">← Retour aux projets</a>
-</main>
+        <h2>Mon rôle</h2>
+        <p>
+          J’ai travaillé sur la préparation des données et la construction des
+          tableaux de bord Power BI ainsi que sur la conception graphique du rendu final.
+        </p>
+
+        <h2>Résultats</h2>
+        <ul>
+          <li>Tableau de bord Power BI avec indicateurs et filtres</li>
+          <li>Storytelling (sélection d’axes d’analyse + synthèse visuelle)</li>
+          <li>Rendu “jury” : visuel, lisible, orienté décision</li>
+        </ul>
+
+        <h2>Illustrations</h2>
+        <div class="media">
+          <!-- Si tu ajoutes plus tard une image, mets-la ici (ex: images/sncf/dashboard.png) -->
+          <img src="images/sncf/dashboard.png" alt="Dashboard Power BI (SNCF)"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <div class="placeholder" style="display:none;">
+            (Image à ajouter) Capture du dashboard Power BI / visuels du rendu final.
+          </div>
+          <div class="caption">Exemple de visualisation (à ajouter quand tu auras une capture)</div>
+        </div>
+
+        <h2>Ce que j’ai appris</h2>
+        <ul>
+          <li>Combiner analyse et design pour une bonne communication</li>
+          <li>Travailler en équipe sur un projet de data storytelling</li>
+          <li>Valoriser des données complexes auprès d’un jury non technique</li>
+        </ul>
+
+        <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-ghost" href="projets.html">← Retour aux projets</a>
+          <a class="btn btn-ghost" href="index.html#contact">Me contacter →</a>
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="side">
+        <div class="mini">
+          <strong>Infos</strong>
+          <div style="margin-top:10px; color: var(--muted);">
+            <div><b>Année :</b> 2024</div>
+            <div><b>Type :</b> Challenge externe</div>
+            <div><b>Outils :</b> Power BI, Excel, Canva</div>
+          </div>
+          <div class="meta">
+            <span class="tag">Power BI</span>
+            <span class="tag">Dataviz</span>
+            <span class="tag">Storytelling</span>
+            <span class="tag">Excel</span>
+          </div>
+        </div>
+
+        <div class="mini">
+          <strong>Compétences mobilisées</strong>
+          <ul style="margin-top:10px;">
+            <li>Préparation de données</li>
+            <li>Création de KPI</li>
+            <li>Dataviz & narration</li>
+            <li>Rendu orienté jury</li>
+          </ul>
+        </div>
+
+        <div class="mini">
+          <strong>Pour améliorer encore</strong>
+          <p style="margin-top:10px;">
+            Ajoute 2 captures Power BI + 1 phrase d’impact (ex: “X KPI”, “Y causes de retard”).
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div>© 2026 — Abou Diop</div>
+        <div>Challenge SNCF • Dataviz</div>
+      </div>
+    </footer>
+  </main>
 </body>
 </html>
