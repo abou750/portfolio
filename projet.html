@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abou Diop | Projets détaillés</title>
+  <meta name="description" content="Page de projets détaillés du portfolio d'Abou Diop." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1d4ed8',
+            secondary: '#eff6ff',
+            ink: '#0f172a',
+            soft: '#475569'
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(15, 23, 42, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+  
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <header class="border-b border-slate-200 bg-white/90 backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <a href="index.html" class="text-lg font-bold tracking-tight text-slate-900">Abou Diop</a>
+      <div class="flex gap-6 text-sm font-medium">
+        <a href="index.html" class="text-slate-600 transition hover:text-primary">Retour au portfolio</a>
+        <a href="#projets" class="text-slate-600 transition hover:text-primary">Projets détaillés</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="inline-flex rounded-full bg-blue-100 px-4 py-1 text-sm font-semibold text-primary">Projets détaillés</p>
+        <h1 class="mt-4 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">Documents, visuels et traces de travail</h1>
+        <p class="mt-6 text-lg leading-8 text-slate-600">
+          Cette page complète mon portfolio principal. Elle rassemble des visuels, des livrables et quelques supports pour illustrer plus concrètement certains projets présentés sur la page principale.
+        </p>
+      </div>
+    </section>
+
+    <section id="projets" class="mx-auto max-w-7xl px-6 pb-20 lg:px-8">
+      <div class="grid gap-8 lg:grid-cols-2">
+        <article class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
+          <h2 class="text-2xl font-bold text-slate-900"> Alternance SGGN — Qlik Sense</h2>
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            Cette partie regroupe deux visuels qui illustrent mon travail sur l’infocentre : un modèle de données et un exemple de tableau de bord. L’objectif n’est pas de tout montrer, mais de donner un appui visuel à ce qui est expliqué dans le portfolio principal.
+          </p>
+          <div class="mt-6 space-y-6">
+            <div class="overflow-hidden rounded-2xl border border-slate-200">
+              <img src="modele_sggn.jpeg" alt="Modèle de données Qlik Sense" class="w-full object-contain max-h-[420px] mx-auto transition duration-300 hover:scale-[1.02]" />
+            </div>
+            <p class="text-sm text-slate-500">Modèle de données utilisé dans Qlik Sense, notamment pour la liaison avec le référentiel APE.</p>
+
+            <div class="overflow-hidden rounded-2xl border border-slate-200">
+              <img src="dashboard_qlik.jpeg" alt="Dashboard Qlik Sense" class="w-full object-contain max-h-[420px] mx-auto transition duration-300 hover:scale-[1.02]" />
+            </div>
+            <p class="text-sm text-slate-500">Exemple de tableau de bord Qlik Sense utilisé pour le suivi et le pilotage des conventions.</p>
+          </div>
+        </article>
+
+        <article class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
+          <h2 class="text-2xl font-bold text-slate-900"> Projet Dataviz</h2>
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            Projet en équipe autour d’une question simple : existe-t-il une relation entre le marché immobilier et la fréquentation des gares ?
+          </p>
+          <div class="mt-6 space-y-4">
+            <a href="Projet_dataviz1.pdf" class="inline-flex rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-primary hover:text-primary">
+              Ouvrir le PDF du projet Dataviz
+            </a>
+            <a href="https://public.tableau.com/views/AbouNeilSelim/Existetilunerelationentrelimmobilieretlestransportsencommun" target="_blank" rel="noreferrer" class="inline-flex rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5">
+              Voir la visualisation Tableau
+            </a>
+          </div>
+          <p class="mt-6 text-sm leading-7 text-slate-600">
+            Avec le recul, ce projet m’a surtout appris que la visualisation n’a de valeur que si le travail de préparation, de nettoyage et de vérification des données a été fait sérieusement en amont.
+          </p>
+        </article>
+
+        <article class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
+          <h2 class="text-2xl font-bold text-slate-900"> SAE 101</h2>
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            Premier travail autour de PostgreSQL et Metabase, à partir de données étudiantes. Ce projet m’a surtout appris à ne pas lancer des requêtes sans avoir d’abord une vraie question d’analyse en tête.
+          </p>
+          <div class="mt-6">
+            <p class="rounded-2xl bg-slate-100 p-4 text-sm text-slate-500"><div class="overflow-hidden rounded-2xl border border-slate-200 mt-4">
+              <img src="metabase_capture.jpeg" alt="Visualisation Metabase - travail exploratoire" class="w-full object-contain max-h-[420px] mx-auto transition duration-300 hover:scale-[1.02]" />
+            </div>
+            <p class="text-sm text-slate-500 mt-2">Exemple de visualisation réalisée dans Metabase lors du travail exploratoire sur les notes des étudiants. Le nuage de points met en relation la moyenne des notes et leur écart-type afin d'observer l'hétérogénéité des évaluations.</p></p>
+          </div>
+        </article>
+
+        <article class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
+          <h2 class="text-2xl font-bold text-slate-900"> SAE 201 — Conception de base de données</h2>
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            Dans cette SAE, l’objectif était de concevoir une base de données complète à partir d’un modèle conceptuel. Nous avons d’abord réalisé la modélisation entité‑association avec l’outil draw.io, puis nous avons implémenté la base dans MySQL Workbench.
+          </p>
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            Ce projet m’a surtout permis de mieux comprendre la logique entre les différentes entités : étudiants, enseignants, modules, évaluations et notes. La difficulté principale était de bien structurer les relations entre les tables afin de conserver une base cohérente.
+          </p>
+          <div class="mt-6 overflow-hidden rounded-2xl border border-slate-200">
+            <img src="sae201_modelisation.jpeg" alt="Modélisation entité association SAE 201" class="w-full object-contain max-h-[420px] mx-auto transition duration-300 hover:scale-[1.02]" />
+          </div>
+          <p class="text-sm text-slate-500 mt-2">Extrait de la modélisation entité‑association réalisée pour la SAE 201. Ce schéma montre les relations entre les étudiants, les enseignants, les modules et les évaluations.</p>
+          <div class="mt-6">
+            <a href="SAE201_projet.pdf" class="inline-flex rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-primary hover:text-primary">
+              Ouvrir le PDF du projet SAE 201
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white py-6 text-center text-sm text-slate-500">
+    <p>© 2026 Abou Diop — Projets détaillés</p>
+  </footer>
+</body>
+</html>
