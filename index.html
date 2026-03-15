@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abou Diop | Portfolio BUT Science des Données</title>
-  <meta name="description" content="Portfolio one page d'Abou Diop, étudiant en BUT Science des Données, orienté Data Analyst junior." />
+  <title>Abou Diop | Data Analyst Junior</title>
+  <meta name="description" content="Portfolio one-page d'Abou Diop, étudiant en BUT Science des Données, orienté Data Analyst Junior." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -25,522 +25,328 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
+    body { overflow-x: hidden; }
+    img { max-width: 100%; height: auto; display: block; }
+    h1, h2, h3 { word-break: break-word; }
   </style>
 </head>
-<body class="bg-slate-50 text-ink dark:bg-slate-900 dark:text-slate-100">
-  <header class="fixed top-0 left-0 right-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-      <script>
-        function toggleTheme(){
-          document.documentElement.classList.toggle('dark');
-          localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-        }
-        window.addEventListener('DOMContentLoaded',()=>{
-          const saved = localStorage.getItem('theme');
-          if(saved==='dark'){document.documentElement.classList.add('dark');}
-        });
-      </script>
-      <a href="#accueil" class="text-lg font-bold tracking-tight text-slate-900">Abou Diop</a>
-      <div class="hidden gap-6 text-sm font-medium md:flex">
-        <a href="#accueil" class="text-slate-600 transition hover:text-primary">Accueil</a>
-        <a href="#projets" class="text-slate-600 transition hover:text-primary">Projets</a>
+<body class="bg-slate-50 text-slate-900">
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="#accueil" class="text-base font-bold tracking-tight text-slate-900 sm:text-lg">Abou Diop</a>
+      <div class="hidden items-center gap-5 text-sm font-medium md:flex">
         <a href="#alternance" class="text-slate-600 transition hover:text-primary">Alternance</a>
-        <a href="#competences" class="text-slate-600 transition hover:text-primary">Compétences BUT</a>
-        <a href="#vision" class="text-slate-600 transition hover:text-primary">Vision</a>
+        <a href="#projets" class="text-slate-600 transition hover:text-primary">Projets</a>
+        <a href="#competences" class="text-slate-600 transition hover:text-primary">Compétences</a>
+        <a href="#outils" class="text-slate-600 transition hover:text-primary">Outils</a>
+        <a href="#video" class="text-slate-600 transition hover:text-primary">Vidéo</a>
         <a href="#contact" class="text-slate-600 transition hover:text-primary">Contact</a>
-      </div>
-    <button onclick="toggleTheme()" class="ml-4 rounded-lg border border-slate-300 px-3 py-1 text-xs font-semibold text-slate-700 hover:border-primary hover:text-primary">☀️ / 🌙</button>
       </div>
     </nav>
   </header>
 
-  <main class="pt-24">
-    <section id="accueil" class="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
-      <div class="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+  <main class="min-w-0 pt-24">
+    <section id="accueil" class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+      <div class="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-  <p class="mb-4 inline-flex rounded-full bg-blue-100 px-4 py-1 text-sm font-semibold text-primary">
-    Portfolio BUT Science des Données
-  </p>
+          <p class="inline-flex rounded-full bg-blue-100 px-4 py-1 text-sm font-semibold text-primary">Portfolio Data Analyst Junior</p>
+          <h1 class="mt-5 max-w-3xl text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+            Étudiant en BUT Science des Données, je développe un profil orienté <span class="text-primary">analyse, BI et datavisualisation</span>.
+          </h1>
+          <p class="mt-6 max-w-3xl break-words text-base leading-8 text-slate-600 sm:text-lg">
+            Ce portfolio présente mon alternance au Secrétariat Général de la Garde Nationale, mes projets universitaires en SQL, BI et modélisation, ainsi que les compétences que je souhaite mettre au service d’un poste de Data Analyst Junior.
+          </p>
 
-  <h1 class="max-w-4xl text-4xl font-bold tracking-tight text-slate-900 md:text-6xl">
-    Étudiant en 3e année de BUT SD, je construis mon profil de <span class="text-primary">Data Analyst junior</span>
-    entre exigence académique, rigueur technique et prise de recul.
-  </h1>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="CV_Data_diop.pdf" class="rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5">Télécharger mon CV</a>
+            <a href="https://www.linkedin.com/in/abou-diop-5aba9b26b/" target="_blank" rel="noreferrer" class="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-primary hover:text-primary">LinkedIn</a>
+            <a href="https://github.com/abou750" target="_blank" rel="noreferrer" class="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-primary hover:text-primary">GitHub</a>
+          </div>
 
-  <p class="mt-6 max-w-3xl text-lg leading-8 text-soft">
-    Ce portfolio a un double objectif : présenter mon parcours dans le cadre du BUT Science des Données,
-    et montrer à de futurs recruteurs comment j’ai appris à transformer des données en indicateurs utiles,
-    tout en prenant du recul sur mes méthodes, mes limites et ma progression.
-  </p>
-
-  <div class="mt-8 flex flex-wrap gap-4">
-    <a href="CV_Data_diop.pdf" class="rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5">
-      Télécharger mon CV
-    </a>
-    <a href="https://www.linkedin.com/in/abou-diop-5aba9b26b/" target="_blank" rel="noreferrer" class="rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-primary hover:text-primary">
-      Voir mon LinkedIn
-    </a>
-    <a href="projet.html" class="rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-primary hover:text-primary">
-      Découvrir mes projets détaillés
-    </a>
-  </div>
-
-  <p class="mt-4 text-sm text-slate-500">
-    Portfolio, projets détaillés et CV téléchargeable pour découvrir concrètement mon parcours.
-  </p>
-
-  <div class="mt-10 grid gap-4 sm:grid-cols-3">
-    <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft">
-      <p class="text-sm text-slate-500">Positionnement</p>
-      <p class="mt-2 text-base font-semibold text-slate-900">Data Analyst junior</p>
-    </div>
-    <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft">
-      <p class="text-sm text-slate-500">Outils</p>
-      <p class="mt-2 text-base font-semibold text-slate-900">Qlik Sense, SQL, Tableau, Power BI</p>
-    </div>
-    <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft">
-      <p class="text-sm text-slate-500">Ce que je cherche</p>
-      <p class="mt-2 text-base font-semibold text-slate-900">Un poste pour apprendre vite et livrer utile</p>
-    </div>
-  </div>
-
-  <div class="mt-12 max-w-3xl">
-    <span class="mb-3 inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-primary">
-      Présentation vidéo
-    </span>
-
-    <div class="rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-4 shadow-soft">
-      <h3 class="mb-2 text-xl font-semibold text-slate-900">
-        Mon portfolio en 1 minute
-      </h3>
-
-      <p class="mb-4 text-sm leading-6 text-slate-600">
-        Avant de parcourir mon portfolio, voici une courte présentation pour comprendre mon profil, mes projets et ma démarche.
-      </p>
-
-      <div class="overflow-hidden rounded-2xl border border-slate-200">
-        <div class="relative w-full bg-slate-100" style="padding-top:56.25%">
-          <iframe
-            class="absolute inset-0 h-full w-full"
-            src="https://www.youtube.com/embed/G2IBbggfUbU"
-            title="Présentation du portfolio Abou Diop"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
+          <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft">
+              <p class="text-sm text-slate-500">Cible</p>
+              <p class="mt-2 text-sm font-semibold text-slate-900 sm:text-base">Data Analyst Junior</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft">
+              <p class="text-sm text-slate-500">Spécialité</p>
+              <p class="mt-2 text-sm font-semibold text-slate-900 sm:text-base">SQL, BI, datavisualisation</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-soft">
+              <p class="text-sm text-slate-500">Disponibilité</p>
+              <p class="mt-2 text-sm font-semibold text-slate-900 sm:text-base">À partir de septembre [À CONFIRMER]</p>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <p class="mt-3 text-sm leading-6 text-slate-500">
-        Une courte vidéo pour présenter mon parcours, mes projets et ce que je recherche aujourd’hui en tant que Data Analyst junior.
-      </p>
-    </div>
-  </div>
-</div>
-
-        <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
-          <h2 class="text-2xl font-bold text-slate-900">Ma ligne directrice</h2>
-          <div class="mt-6 space-y-5 text-sm leading-7 text-slate-600">
-            <p>
-              Au fil de mes projets et de mon alternance, j’ai compris qu’un travail data ne se limite pas à produire
-              un résultat technique. Il faut aussi comprendre le besoin métier, fiabiliser la donnée, choisir une restitution
-              lisible et accepter de revenir sur ce qui ne fonctionne pas.
-            </p>
-            <p>
-              C’est cette progression que je veux montrer ici : je suis passé d’une logique parfois très scolaire,
-              centrée sur l’outil, à une logique plus structurée, où je fais davantage attention à la robustesse,
-              à la cohérence des indicateurs et à l’utilisateur final.
-            </p>
-            <p class="rounded-2xl bg-secondary p-4 text-primary">
-              Ce portfolio adopte volontairement un ton personnel : il présente mes réalisations, mais aussi les difficultés
-              rencontrées, les erreurs de départ et la manière dont j’ai appris à mieux travailler.
-            </p>
+        <div class="min-w-0 rounded-3xl border border-slate-200 bg-white p-7 shadow-soft sm:p-8">
+          <h2 class="text-2xl font-bold text-slate-900">En quelques points</h2>
+          <ul class="mt-6 min-w-0 space-y-4 break-words text-sm leading-7 text-slate-600">
+            <li>• Alternance au <strong>SGGN</strong> avec travail sur des tableaux de bord et des indicateurs sous <strong>Qlik Sense</strong>.</li>
+            <li>• Projets universitaires en <strong>SQL</strong>, <strong>Metabase</strong>, <strong>Tableau</strong> et modélisation de base de données.</li>
+            <li>• Sensibilité forte à la <strong>qualité des données</strong>, à la lisibilité des restitutions et à l’utilité métier des indicateurs.</li>
+            <li>• Progression marquée sur la communication, l’autonomie et la prise d’initiative.</li>
+          </ul>
+          <div class="mt-6 rounded-2xl bg-secondary p-4 text-sm leading-7 text-primary">
+            Ce site est volontairement pensé pour une lecture rapide : un recruteur doit pouvoir comprendre en quelques secondes ce que j’ai fait, avec quels outils, et ce que cela dit de mon profil.
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projets" class="border-y border-slate-200 bg-white">
-      <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+    <section id="alternance" class="border-y border-slate-200 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div class="max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Mes projets</p>
-          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">Des projets où j’ai appris autant de mes blocages que de mes résultats</h2>
-          <p class="mt-4 text-lg text-soft">
-            Pour chaque projet, je mets en avant le contexte, les difficultés rencontrées et surtout la prise de recul,
-            car c’est ce qui reflète le mieux ma progression.
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Alternance</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">SGGN — Qlik Sense, fiabilisation des données et organisation du travail</h2>
+          <p class="mt-4 text-base leading-8 text-slate-600 sm:text-lg">
+            Mon alternance au Secrétariat Général de la Garde Nationale est l’expérience la plus structurante de mon parcours. J’y ai travaillé sur un infocentre Qlik Sense utilisé pour le pilotage des conventions et la production d’indicateurs à destination de la direction.
           </p>
         </div>
 
-        <div class="mt-12 grid gap-8 lg:grid-cols-2">
-          <article class="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-soft">
-            <div class="flex items-center justify-between gap-4">
-              <h3 class="text-2xl font-bold text-slate-900">SAE S502 — Migration SQL ⇄ NoSQL par abstraction</h3>
-              <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-primary">SQL / NoSQL</span>
-            </div>
-            <div class="mt-6 space-y-5 text-sm leading-7 text-slate-600">
-              <div>
-                <p class="font-semibold text-slate-900">Contexte</p>
-                <p>
-                  L’objectif du projet était de montrer qu’on peut concevoir et manipuler des données indépendamment de leur
-                  mode de persistance, relationnel ou non relationnel. Le projet mobilisait la normalisation, la dénormalisation,
-                  la programmation orientée objet et une logique DAO/ORM pour rendre la migration SQL ⇄ NoSQL presque invisible
-                  pour le reste de l’application.
-                </p>
-              </div>
-              <div>
-                <p class="font-semibold text-slate-900">Défis rencontrés</p>
-                <p>
-                  J’ai eu du mal au début, car j’avais perdu certains réflexes sur SQL et sur la logique de dénormalisation.
-                  Mon réflexe naturel était de vouloir tout résoudre en Python, ce qui me faisait parfois contourner le vrai sujet
-                  du projet au lieu d’entrer dans la logique de persistance et de structure des données.
-                </p>
-              </div>
-              <div>
-                <p class="font-semibold text-slate-900">Prise de recul / solution</p>
-                <p>
-                  Ce projet m’a obligé à revenir aux fondamentaux. J’ai repris les cours pour retravailler la dénormalisation,
-                  puis j’ai utilisé la documentation pour mieux comprendre comment adapter des requêtes simples à un environnement
-                  NoSQL. Avec le recul, je vois ce projet comme un tournant : il m’a appris à ne pas me réfugier trop vite dans
-                  l’outil que je maîtrise le mieux, et à accepter de raisonner d’abord en architecture et en modèle de données.
-                </p>
-              </div>
-            </div>
+        <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article class="min-w-0 rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-soft">
+            <h3 class="text-xl font-bold text-slate-900">📊 Ce que j’ai fait</h3>
+            <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-600">
+              <li>• Correction d’erreurs de chargement dans Qlik Sense lorsque les fichiers sources évoluaient.</li>
+              <li>• Ajustements du script et vérification de la cohérence des indicateurs en préproduction.</li>
+              <li>• Intégration d’un référentiel APE / SGDSN pour enrichir l’analyse par secteur d’activité.</li>
+              <li>• Amélioration de la lisibilité de certains tableaux de bord.</li>
+            </ul>
           </article>
 
-          <article class="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-soft">
-            <div class="flex items-center justify-between gap-4">
-              <h3 class="text-2xl font-bold text-slate-900">SAE 101</h3>
-              <span class="rounded-full bg-slate-200 px-3 py-1 text-xs font-semibold text-slate-700">Analyse SQL</span>
-            </div>
-            <div class="mt-6 space-y-5 text-sm leading-7 text-slate-600">
-              <div>
-                <p class="font-semibold text-slate-900">Contexte</p>
-                <p>L’objectif de ce projet était de mettre en place un environnement d’analyse avec PostgreSQL et Metabase,
-                     puis de montrer que l’on maîtrisait les requêtes SQL de base à partir de données sur les étudiants de l’université.
-                </p>
-              </div>
-              <div>
-                <p class="font-semibold text-slate-900">Défis rencontrés</p>
-                <p>Comme j’avais déjà vu SQL au lycée, 
-                   les requêtes de base ne m’ont pas posé trop de difficulté. En revanche, le plus compliqué était de savoir quoi analyser dans la base de données.
-                </p>
-              </div>
-              <div>
-                <p class="font-semibold text-slate-900">Prise de recul / solution</p>
-                <p>
-                 Avec le recul, je commencerais par définir un cas concret. Par exemple : si je suis professeur, quelles informations sur mes étudiants peuvent m’aider ?
-                  Ou si je suis directeur d’IUT, quels indicateurs seraient utiles, comme la répartition des types de bac ou certaines tendances sur les résultats.
-                </p>
-              </div>
-            </div>
+          <article class="min-w-0 rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-soft">
+            <h3 class="text-xl font-bold text-slate-900">🧠 Ce que j’ai appris</h3>
+            <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-600">
+              <li>• En entreprise, les données sont rarement aussi propres qu’en cours.</li>
+              <li>• Le pré-traitement et la fiabilisation ne sont pas des étapes secondaires.</li>
+              <li>• Un indicateur utile n’est pas seulement correct techniquement : il doit aussi être lisible et cohérent.</li>
+              <li>• Il faut savoir demander de l’aide au bon moment au lieu de rester bloqué trop longtemps.</li>
+            </ul>
           </article>
 
-          <article class="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-soft">
-            <div class="flex items-center justify-between gap-4">
-              <h3 class="text-2xl font-bold text-slate-900">Dataviz — Immobilier & transports</h3>
-              <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-primary">Excel / Tableau</span>
-            </div>
-            <div class="mt-6 space-y-5 text-sm leading-7 text-slate-600">
-              <div>
-                <p class="font-semibold text-slate-900">Contexte</p>
-                <p>
-                  En équipe, nous avons étudié une question simple mais parlante : existe-t-il un lien entre le nombre de ventes
-                  de biens immobiliers et la fréquentation des gares ? Le projet combinait des données immobilières et des données
-                  de transport, avec une restitution sous Tableau.
-                </p>
-              </div>
-              <div>
-                <p class="font-semibold text-slate-900">Défis rencontrés</p>
-                <p>
-                  La contrainte de temps était forte, et Tableau était encore un outil récent pour moi. Surtout, nous sommes tombés
-                  dans un piège classique de débutant : nous avons voulu produire une visualisation trop vite, sans prendre assez
-                  de recul sur la qualité et la fiabilité des données exploitées.
-                </p>
-              </div>
-              <div>
-                <p class="font-semibold text-slate-900">Prise de recul / solution</p>
-                <p>
-                  Avec le recul, je commencerais d’abord par un vrai travail de nettoyage et de contrôle, par exemple avec des tableaux
-                  croisés dynamiques et une vérification plus stricte sur Excel, avant de passer à la visualisation. Ce projet reste
-                  très formateur pour moi, car il m’a appris qu’une dataviz convaincante ne repose pas d’abord sur l’esthétique,
-                  mais sur la qualité du travail préparatoire.
-                </p>
-              </div>
-            </div>
+          <article class="min-w-0 rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-soft">
+            <h3 class="text-xl font-bold text-slate-900">📌 Organisation</h3>
+            <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-600">
+              <li>• Utilisation de la méthode <strong>Kanban</strong> via <strong>Resana</strong>.</li>
+              <li>• Suivi des tâches entre « À faire », « En cours » et « Terminé ».</li>
+              <li>• Priorisation des demandes avec mon tuteur et l’équipe.</li>
+              <li>• Développement progressif de mon autonomie et de ma prise d’initiative.</li>
+            </ul>
           </article>
+        </div>
 
-          <article class="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-soft">
-            <div class="flex items-center justify-between gap-4">
-              <h3 class="text-2xl font-bold text-slate-900">SAE 201</h3>
-              <span class="rounded-full bg-slate-200 px-3 py-1 text-xs font-semibold text-slate-700">SAE 201 – Conception de base de données</span>
-            </div>
-            <div class="mt-6 space-y-5 text-sm leading-7 text-slate-600">
-              <div>
-                <p class="font-semibold text-slate-900">Contexte</p>
-                <p>Ce projet était une suite logique du précédent. 
-                    Cette fois-ci, nous devions concevoir nous-mêmes la base de données des étudiants, en définissant les tables et les relations.</p>
-              </div>
-              <div>
-                <p class="font-semibold text-slate-900">Défis rencontrés</p>
-                <p>J’ai découvert l’outil diagram.io, qui m’a aidé à mieux comprendre la modélisation entité-association.
-                     La principale difficulté venait plutôt de l’outil MySQL Workbench, que nous ne maîtrisions pas encore très bien.</p>
-              </div>
-              <div>
-                <p class="font-semibold text-slate-900">Prise de recul / solution</p>
-                <p>
-                  Finalement, cette difficulté m’a permis de progresser. En prenant le temps de comprendre l’outil,
-                   j’ai mieux saisi la logique de modélisation et l’importance de structurer correctement les tables avant de passer à l’implémentation.
-                </p>
-              </div>
-            </div>
-          </article>
+        <div class="mt-8 grid gap-6 lg:grid-cols-2 items-start">
+          <div class="overflow-hidden min-w-0 rounded-3xl border border-slate-200 bg-white p-4 shadow-soft">
+            <img src="modele_sggn.jpeg" alt="Modèle de données Qlik Sense" class="mx-auto w-full h-auto object-contain max-h-[420px]" />
+            <p class="mt-3 text-sm leading-6 text-slate-500">Modèle de données utilisé dans Qlik Sense, notamment pour la liaison avec le référentiel APE.</p>
+          </div>
+          <div class="overflow-hidden min-w-0 rounded-3xl border border-slate-200 bg-white p-4 shadow-soft">
+            <img src="dashboard_qlik.jpeg" alt="Tableau de bord Qlik Sense" class="mx-auto w-full h-auto object-contain max-h-[420px]" />
+            <p class="mt-3 text-sm leading-6 text-slate-500">Exemple de tableau de bord utilisé pour le suivi et le pilotage des conventions.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="alternance" class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-      <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-        <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Mon alternance</p>
-          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">SGGN — apprendre à produire des indicateurs fiables, pas seulement des visuels</h2>
-          <p class="mt-4 text-lg leading-8 text-soft">
-            Au Secrétariat Général de la Garde Nationale, j’ai travaillé sur l’amélioration continue d’un infocentre Qlik Sense.
-            Cette expérience m’a fait progresser techniquement, mais surtout dans ma façon d’aborder un besoin métier,
-            de vérifier une donnée et de collaborer avec des interlocuteurs variés.
+    <section id="projets" class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Projets universitaires</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">4 projets pour montrer mon profil data</h2>
+        <p class="mt-4 text-base leading-8 text-slate-600 sm:text-lg">
+          J’ai sélectionné les projets les plus utiles pour un recruteur : ils montrent des compétences différentes, mais complémentaires, entre SQL, BI, visualisation et modélisation.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-6 lg:grid-cols-2 items-start">
+        <article class="min-w-0 rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+          <h3 class="text-2xl font-bold text-slate-900">🧩 SAE 502 — Migration SQL ⇄ NoSQL</h3>
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            Projet autour de la migration de données entre SQL et NoSQL, avec une logique d’abstraction entre la couche métier et la couche de persistance.
           </p>
+          <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-600">
+            <li>• Travail sur la normalisation et la dénormalisation.</li>
+            <li>• Réflexion sur la séparation entre logique métier et stockage.</li>
+            <li>• Projet marquant pour moi, car j’avais tendance au départ à vouloir tout résoudre en Python.</li>
+            <li>• Il m’a obligé à revenir aux fondamentaux de modélisation et de structure des données.</li>
+          </ul>
+        </article>
 
-          <div class="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
-            <h3 class="text-xl font-bold text-slate-900">Ce que j’ai concrètement fait</h3>
-            <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-600">
-              <li>• Développement et amélioration continue d’un infocentre sous Qlik Sense.</li>
-              <li>• Correction d’erreurs de chargement liées à l’évolution des fichiers sources.</li>
-              <li>• Travail sur les règles de gestion, les filtres et la cohérence des indicateurs.</li>
-              <li>• Intégration d’un référentiel SGDSN basé sur les codes APE pour enrichir le modèle de données.</li>
-              <li>• Amélioration progressive de la lisibilité et de l’ergonomie des tableaux de bord.</li>
-              <li>• Participation à des missions transverses : événement institutionnel, gestion d’accès, mise à jour Drupal.</li>
-            </ul>
+        <article class="min-w-0 rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+          <h3 class="text-2xl font-bold text-slate-900">📈 Dataviz — Immobilier & transports</h3>
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            Projet mené sur Tableau pour étudier le lien entre le marché immobilier et la fréquentation des gares.
+          </p>
+          <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-600">
+            <li>• Travail sur des données hétérogènes à croiser.</li>
+            <li>• Contrainte de temps et découverte de Tableau.</li>
+            <li>• Prise de recul importante : une visualisation ne vaut rien si la qualité des données n’est pas vérifiée en amont.</li>
+            <li>• Projet formateur sur le lien entre préparation des données et restitution finale.</li>
+          </ul>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="Projet_dataviz1.pdf" class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-primary hover:text-primary">PDF du projet</a>
+            <a href="https://public.tableau.com/views/AbouNeilSelim/Existetilunerelationentrelimmobilieretlestransportsencommun" target="_blank" rel="noreferrer" class="rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5">Visualisation Tableau</a>
           </div>
-        </div>
+        </article>
 
-        <div class="space-y-6">
-          <article class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
-            <p class="text-sm font-semibold text-primary">01 — Mission technique marquante</p>
-            <h3 class="mt-2 text-2xl font-bold text-slate-900">Correction d’un chargement cassé par l’évolution du fichier source</h3>
-            <p class="mt-4 text-sm leading-7 text-slate-600">
-              Lors d’une mise à jour des fichiers Excel sources, certaines colonnes ont été supprimées. Le script Qlik Sense
-              faisait encore référence à ces champs, ce qui empêchait le rechargement et bloquait l’actualisation des indicateurs.
-              J’ai analysé le script, retiré les références devenues invalides, ajusté le chargement puis vérifié le bon fonctionnement
-              en préproduction. Ce type de tâche m’a appris à ne pas voir la donnée comme un acquis : un tableau de bord ne vaut que
-              si sa chaîne de chargement reste robuste.
-            </p>
-          </article>
+        <article class="min-w-0 rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+          <h3 class="text-2xl font-bold text-slate-900">🗄️ SAE 101 — SQL & reporting</h3>
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            Premier projet autour de PostgreSQL et Metabase, à partir de données étudiantes.
+          </p>
+          <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-600">
+            <li>• Mise en place d’un environnement simple d’analyse et de reporting.</li>
+            <li>• Utilisation de requêtes SQL de base pour explorer la base.</li>
+            <li>• Difficulté principale : savoir quoi analyser dans une base riche, pas seulement écrire une requête correcte.</li>
+            <li>• Projet qui m’a appris à partir d’une vraie question métier ou d’un cas concret.</li>
+          </ul>
+          <div class="mt-5 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-4">
+            <img src="metabase_capture.jpeg" alt="Capture Metabase" class="mx-auto w-full h-auto object-contain max-h-[320px]" />
+          </div>
+        </article>
 
-          <article class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
-            <p class="text-sm font-semibold text-primary">02 — Structuration de la donnée</p>
-            <h3 class="mt-2 text-2xl font-bold text-slate-900">Référentiel SGDSN et liaison du modèle via le code APE</h3>
-            <p class="mt-4 text-sm leading-7 text-slate-600">
-              L’une des missions les plus structurantes a consisté à intégrer un nouveau référentiel afin de mieux classer les partenaires
-              par secteur d’activité. J’ai ajouté une nouvelle section dans le script, chargé la table de référence puis relié la table
-              principale des conventions à la dimension sectorielle via le code APE. Cette mission m’a fait passer d’une logique centrée
-              sur le visuel à une logique plus complète, où la qualité du modèle de données conditionne la pertinence des analyses.
-            </p>
-            <div class="mt-5 overflow-hidden rounded-2xl border border-slate-200">
-              <img src="modele_sggn.jpeg" alt="Modèle de données Qlik Sense montrant la liaison via code APE" class="h-full w-full object-cover" />
-            </div>
-            <p class="text-sm text-slate-500 mt-2">Extrait du modèle de données utilisé dans Qlik Sense pour relier les conventions au référentiel APE.</p>
-            
-            <div class="mt-6 overflow-hidden rounded-2xl border border-slate-200">
-              <img src="dashboard_qlik.jpeg" alt="Exemple de tableau de bord Qlik Sense" class="h-full w-full object-cover" />
-            </div>
-            <p class="text-sm text-slate-500 mt-2">Exemple de tableau de bord Qlik Sense utilisé pour suivre les conventions et produire des indicateurs de pilotage.</p>
-            </div>
-          </article>
-
-          <article class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
-            <p class="text-sm font-semibold text-primary">03 — Évolution personnelle</p>
-            <h3 class="mt-2 text-2xl font-bold text-slate-900">D’une posture exécutive à une posture plus analytique et proactive</h3>
-            <p class="mt-4 text-sm leading-7 text-slate-600">
-              L’un des apprentissages les plus importants de cette alternance n’est pas purement technique. Au début, j’avais tendance
-              à chercher seul trop longtemps, à produire ce qui était demandé sans toujours interroger la logique globale et à peu formaliser
-              mon organisation. Avec le temps, la méthode Kanban sur Resana, les échanges avec mon tuteur et les retours des réservistes
-              m’ont aidé à mieux hiérarchiser, à poser des questions plus tôt et à raisonner davantage en termes d’usage, de priorité et
-              de fiabilité. C’est probablement la progression dont je suis le plus conscient aujourd’hui.
-            </p>
-          </article>
-        </div>
+        <article class="min-w-0 rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+          <h3 class="text-2xl font-bold text-slate-900">🧠 SAE 201 — Conception de base de données</h3>
+          <p class="mt-4 text-sm leading-7 text-slate-600">
+            Projet de conception complète d’une base de données à partir d’un modèle conceptuel autour de données étudiantes.
+          </p>
+          <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-600">
+            <li>• Découverte et utilisation de la modélisation entité-association.</li>
+            <li>• Travail sur draw.io puis implémentation dans MySQL Workbench.</li>
+            <li>• Difficulté principale : bien structurer les relations entre tables.</li>
+            <li>• Projet important pour mieux comprendre la logique de construction d’une base cohérente.</li>
+          </ul>
+          <div class="mt-5 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-4">
+            <img src="sae201_modelisation.jpeg" alt="Schéma de modélisation SAE 201" class="mx-auto w-full h-auto object-contain max-h-[320px]" />
+          </div>
+          <div class="mt-5">
+            <a href="SAE201_projet.pdf" class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-primary hover:text-primary">PDF du projet SAE 201</a>
+          </div>
+        </article>
       </div>
     </section>
 
     <section id="competences" class="border-y border-slate-200 bg-white">
-      <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div class="max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Compétences BUT</p>
-          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">Tableau d’auto-évaluation et distanciation critique</h2>
-          <p class="mt-4 text-lg text-soft">
-            Ce tableau ne cherche pas à montrer une maîtrise parfaite. Il met en évidence des situations concrètes, des acquis réels,
-            mais aussi les limites que j’ai identifiées et les points que je dois encore consolider.
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Compétences</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Compétences BUT et recul critique</h2>
+          <p class="mt-4 text-base leading-8 text-slate-600 sm:text-lg">
+            Cette partie condense ce que je sais faire aujourd’hui, mais aussi ce que j’ai appris de mes erreurs et ce que je veux encore améliorer.
           </p>
         </div>
 
-        <div class="mt-10 overflow-hidden rounded-3xl border border-slate-200 shadow-soft">
-          <div class="overflow-x-auto bg-white">
-            <table class="min-w-full divide-y divide-slate-200 text-left text-sm">
-              <thead class="bg-slate-100 text-slate-700">
-                <tr>
-                  <th class="px-6 py-4 font-semibold">Compétence</th>
-                  <th class="px-6 py-4 font-semibold">Ce que j’ai réellement fait</th>
-                  <th class="px-6 py-4 font-semibold">Ce que cela montre</th>
-                  <th class="px-6 py-4 font-semibold">Distanciation critique</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-slate-200 text-slate-600">
-                <tr class="align-top">
-                  <td class="px-6 py-5 font-semibold text-slate-900">C1 — Traiter</td>
-                  <td class="px-6 py-5">
-                    En alternance, j’ai corrigé des erreurs de chargement dans Qlik Sense, ajusté le script lorsque les fichiers sources évoluaient,
-                    et vérifié la cohérence entre les fichiers Excel et les indicateurs affichés.
-                  </td>
-                  <td class="px-6 py-5">
-                    Je sais manipuler une chaîne de traitement simple en gardant l’objectif de fiabilisation des données.
-                  </td>
-                  <td class="px-6 py-5">
-                    Mon point de vigilance est de ne pas me limiter à une correction locale. Je dois continuer à anticiper davantage les effets
-                    d’une modification sur l’ensemble du flux de traitement.
-                  </td>
-                </tr>
-                <tr class="align-top bg-slate-50">
-                  <td class="px-6 py-5 font-semibold text-slate-900">C2 — Analyser</td>
-                  <td class="px-6 py-5">
-                    J’ai travaillé sur des indicateurs de pilotage, sur leur comportement face aux filtres temporels, et sur la cohérence des règles
-                    de gestion utilisées dans les tableaux de bord du SGGN.
-                  </td>
-                  <td class="px-6 py-5">
-                    Je commence à mieux articuler besoin métier, logique de calcul et interprétation du résultat.
-                  </td>
-                  <td class="px-6 py-5">
-                    J’ai encore tendance à passer vite à l’implémentation. Mon enjeu est de prendre plus tôt le temps de formaliser clairement
-                    les hypothèses et les règles avant de produire un indicateur.
-                  </td>
-                </tr>
-                <tr class="align-top">
-                  <td class="px-6 py-5 font-semibold text-slate-900">C3 — Valoriser</td>
-                  <td class="px-6 py-5">
-                    J’ai conçu ou amélioré des visualisations sous Qlik Sense et Tableau, en faisant plus attention à la lisibilité, aux choix graphiques
-                    et au niveau de compréhension attendu par l’utilisateur final.
-                  </td>
-                  <td class="px-6 py-5">
-                    Je ne vois plus la visualisation comme une simple “fin de projet”, mais comme une traduction qui doit rester claire et utile.
-                  </td>
-                  <td class="px-6 py-5">
-                    Le projet Dataviz m’a montré que produire vite une belle sortie ne suffit pas. Je dois continuer à renforcer mon exigence sur la
-                    qualité des données avant la restitution.
-                  </td>
-                </tr>
-                <tr class="align-top bg-slate-50">
-                  <td class="px-6 py-5 font-semibold text-slate-900">C4 — Modéliser</td>
-                  <td class="px-6 py-5">
-                    Le projet S502 m’a confronté à la normalisation, à la dénormalisation et à la séparation entre logique métier et couche de persistance.
-                    En alternance, j’ai aussi mieux compris l’intérêt d’un modèle de données bien relié, notamment via le code APE.
-                  </td>
-                  <td class="px-6 py-5">
-                    Je progresse dans ma capacité à penser la donnée en structure, et pas seulement en requête ou en script.
-                  </td>
-                  <td class="px-6 py-5">
-                    C’est la compétence sur laquelle j’ai encore le plus de marge. Mon premier réflexe reste parfois trop orienté outil. Je dois continuer
-                    à raisonner en schéma, en dépendances et en architecture avant de coder.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="mt-10 overflow-x-auto rounded-3xl border border-slate-200 shadow-soft">
+          <table class="min-w-full divide-y divide-slate-200 bg-white text-left text-sm">
+            <thead class="bg-slate-100 text-slate-700">
+              <tr>
+                <th class="px-5 py-4 font-semibold">Compétence</th>
+                <th class="px-5 py-4 font-semibold">Exemple concret</th>
+                <th class="px-5 py-4 font-semibold">Distanciation critique</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-600">
+              <tr class="align-top">
+                <td class="px-5 py-5 font-semibold text-slate-900">Traiter</td>
+                <td class="px-5 py-5">Correction d’erreurs de chargement dans Qlik Sense, manipulation de bases SQL, travail sur des données étudiantes et institutionnelles.</td>
+                <td class="px-5 py-5">J’ai compris que le pré-traitement n’est pas une option. Je dois encore progresser pour mieux anticiper l’impact global de certaines modifications sur toute la chaîne de traitement.</td>
+              </tr>
+              <tr class="align-top bg-slate-50">
+                <td class="px-5 py-5 font-semibold text-slate-900">Analyser</td>
+                <td class="px-5 py-5">Travail sur des indicateurs Qlik Sense, analyses SQL, réflexion sur la pertinence des questions à poser aux données.</td>
+                <td class="px-5 py-5">Je me rends compte que savoir analyser, ce n’est pas seulement calculer. Il faut d’abord bien définir ce qu’on cherche à comprendre. C’est un point sur lequel je continue à progresser.</td>
+              </tr>
+              <tr class="align-top">
+                <td class="px-5 py-5 font-semibold text-slate-900">Valoriser</td>
+                <td class="px-5 py-5">Qlik Sense, Tableau et Metabase pour restituer les données de manière lisible et utile.</td>
+                <td class="px-5 py-5">Le projet Dataviz m’a montré qu’une visualisation peut être trompeuse si le nettoyage et la vérification en amont ne sont pas solides. La restitution doit rester au service de la compréhension.</td>
+              </tr>
+              <tr class="align-top bg-slate-50">
+                <td class="px-5 py-5 font-semibold text-slate-900">Modéliser</td>
+                <td class="px-5 py-5">SAE 201 sur la conception de base de données et SAE 502 sur la migration SQL ⇄ NoSQL.</td>
+                <td class="px-5 py-5">C’est la compétence que je trouve encore la plus exigeante. J’ai progressé, mais je sais que j’ai encore besoin de consolider ma capacité à raisonner en structure et pas seulement en outil.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="outils" class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+      <div class="grid gap-8 lg:grid-cols-2">
+        <article class="min-w-0 rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Outils</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900">Technologies réellement utilisées</h2>
+          <div class="mt-6 flex flex-wrap gap-3 text-sm">
+            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">SQL</span>
+            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">PostgreSQL</span>
+            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">MySQL</span>
+            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">MongoDB [À CONFIRMER]</span>
+            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">Qlik Sense</span>
+            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">Tableau</span>
+            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">Metabase</span>
+            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">Python</span>
+            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">Excel</span>
+            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">draw.io</span>
+            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">MySQL Workbench</span>
+            <span class="rounded-full bg-blue-100 px-4 py-2 font-semibold text-primary">Resana</span>
+          </div>
+        </article>
+
+        <article class="min-w-0 rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Passeport culturel</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900">Ouvertures et environnements découverts</h2>
+          <ul class="mt-6 space-y-3 text-sm leading-7 text-slate-600">
+            <li>• Participation à l’événement <strong>Honneur aux Réserves</strong> à l’Hôtel de Brienne.</li>
+            <li>• Visite de la base navale de Toulon lors d’un séminaire.</li>
+            <li>• Exposition à la Porte de Versailles.</li>
+            <li>• Événement au Parc des Princes.</li>
+          </ul>
+          <p class="mt-5 text-sm leading-7 text-slate-600">
+            Ces expériences m’ont permis de découvrir des environnements différents et de mieux comprendre que les données s’inscrivent toujours dans un contexte humain, organisationnel et institutionnel.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="video" class="overflow-hidden border-y border-slate-200 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Vidéo</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Présentation rapide du portfolio</h2>
+          <p class="mt-4 text-base leading-8 text-slate-600 sm:text-lg">
+            Espace prévu pour une courte vidéo de présentation. L’idée est de proposer plus tard une vidéo simple de 30 à 60 secondes pour présenter mon parcours, mes projets et mon positionnement.
+          </p>
+        </div>
+
+        <div class="mt-8 aspect-video w-full overflow-hidden rounded-3xl border border-dashed border-slate-300 bg-slate-100 shadow-soft">
+          <div class="flex h-full items-center justify-center p-6 text-center text-sm leading-7 text-slate-500">
+            Intégration YouTube à venir — remplace ce bloc par l’iframe de la vidéo quand elle sera prête.
           </div>
         </div>
       </div>
     </section>
 
-    <section id="vision" class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-      <div class="grid gap-8 lg:grid-cols-2">
-        <article class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Vision</p>
-          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900">Objectifs professionnels</h2>
-          <div class="mt-6 space-y-5 text-sm leading-7 text-slate-600">
-            <div>
-              <p class="font-semibold text-slate-900">Court terme</p>
-              <p>
-                Obtenir un poste de Data Analyst junior afin de consolider mes bases sur l’analyse, le reporting et la visualisation,
-                dans un environnement où je peux encore apprendre vite au contact d’équipes expérimentées.
-              </p>
-            </div>
-            <div>
-              <p class="font-semibold text-slate-900">Moyen terme</p>
-              <p>
-                Monter en compétence sur les outils BI que je surveille déjà de près, notamment Power BI et l’écosystème Microsoft Azure,
-                afin d’élargir mes capacités sur la chaîne décisionnelle.
-              </p>
-            </div>
-            <div>
-              <p class="font-semibold text-slate-900">Long terme</p>
-              <p>
-                À terme, j’aimerais évoluer vers un mode de travail plus autonome, avec l’idée d’un parcours freelance et plus mobile,
-                dans une logique de digital nomad. Je vois cet objectif comme quelque chose de progressif, qui suppose d’abord de construire
-                une vraie crédibilité technique et professionnelle.
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <article class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Passeport culturel</p>
-          <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900">Ouvertures et expériences marquantes</h2>
-          <div class="mt-6 space-y-5 text-sm leading-7 text-slate-600">
-            <p>
-              Mon parcours ne se résume pas à des outils techniques. Certaines expériences m’ont permis de mieux comprendre les environnements
-              dans lesquels la donnée s’inscrit.
-            </p>
-            <div class="rounded-2xl bg-secondary p-5">
-              <p class="font-semibold text-slate-900">Honneur aux Réserves — Hôtel de Brienne</p>
-              <p class="mt-2">
-                Dans le cadre de mon alternance, j’ai contribué à l’organisation de cet événement institutionnel. Cette expérience m’a permis
-                de voir l’envers d’une politique publique : la donnée ne sert pas seulement à produire des tableaux, elle sert aussi à appuyer
-                des décisions, des partenariats et une communication institutionnelle concrète.
-              </p>
-            </div>
-            <p>
-              Cette dimension me rappelle qu’un profil data utile n’est pas seulement technique : il doit aussi comprendre le contexte,
-              les acteurs, les usages et les contraintes du terrain.
-            </p>
-            <p class="text-slate-500">Autres éléments de passeport culturel : visite de la base navale de Toulon lors d’un séminaire. Ces expériences m’ont permis de voir des environnements professionnels et institutionnels différents et de mieux comprendre comment les données peuvent être utilisées dans des contextes variés.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="border-t border-slate-200 bg-slate-900">
-      <div class="mx-auto grid max-w-7xl gap-8 px-6 py-16 text-white lg:grid-cols-[1fr_auto] lg:px-8">
+    <section id="contact" class="bg-slate-900">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 py-14 text-white sm:px-6 lg:grid-cols-[1fr_auto] lg:px-8 lg:py-20">
         <div>
           <p class="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">Contact</p>
-          <h2 class="mt-3 text-3xl font-bold tracking-tight">Disponible pour un poste de Data Analyst junior</h2>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight">Disponible pour échanger autour d’un poste de Data Analyst Junior</h2>
           <p class="mt-4 max-w-2xl text-base leading-8 text-slate-300">
-            Je recherche une opportunité où je peux continuer à progresser sur l’analyse de données, la BI et la restitution
-            d’indicateurs utiles. Si mon profil vous intéresse, vous pouvez me contacter via LinkedIn ou consulter mon CV.
+            Je souhaite continuer à progresser sur des problématiques d’analyse, de BI et de restitution de données. Ce portfolio donne un aperçu de ma manière de travailler, de mes projets et de ma progression.
           </p>
         </div>
         <div class="flex flex-col gap-4 lg:items-end">
-          <a href="mailto:aboudiop@icloud.com" class="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:-translate-y-0.5">
-            aboudiop@icloud.com
-          </a>
-          <a href="https://www.linkedin.com/in/abou-diop-5aba9b26b/" target="_blank" rel="noreferrer" class="rounded-xl border border-slate-600 px-6 py-3 text-sm font-semibold text-white transition hover:border-blue-300 hover:text-blue-300">
-            LinkedIn
-          </a>
-          <a href="CV_Data_diop.pdf" class="rounded-xl border border-slate-600 px-6 py-3 text-sm font-semibold text-white transition hover:border-blue-300 hover:text-blue-300">
-            Télécharger le CV
-          </a>
+          <a href="mailto:aboudiop@icloud.com" class="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:-translate-y-0.5">aboudiop@icloud.com</a>
+          <a href="https://www.linkedin.com/in/abou-diop-5aba9b26b/" target="_blank" rel="noreferrer" class="rounded-xl border border-slate-600 px-6 py-3 text-sm font-semibold text-white transition hover:border-blue-300 hover:text-blue-300">LinkedIn</a>
+          <a href="CV_Data_diop.pdf" class="rounded-xl border border-slate-600 px-6 py-3 text-sm font-semibold text-white transition hover:border-blue-300 hover:text-blue-300">Télécharger le CV</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="bg-slate-950 py-6 text-center text-sm text-slate-400">
-    <p>© 2026 Abou Diop — Portfolio BUT Science des Données</p>
+    <p>© 2026 Abou Diop — Portfolio recruteur</p>
   </footer>
 </body>
 </html>
