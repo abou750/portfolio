@@ -7,7 +7,7 @@
 <meta name="description" content="Abou Diop, Data Analyst Junior. 3 ans au Ministère des Armées. Dashboards décisionnels, SQL, BI."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -21,7 +21,6 @@
   --faint:#3d4050;
   --accent:#e8ff47;
   --accent-rgb:232,255,71;
-  --blue:#4f8ef7;
   --r:12px;
   --max:1120px;
   --mono:'JetBrains Mono',monospace;
@@ -39,335 +38,347 @@ body{
 }
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%;height:auto}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
 
-/* NAV */
+/* ── LAYOUT ── */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+
+/* ── NAV ── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
-  padding:0 32px;
+  padding:0 clamp(16px,4vw,40px);
   display:flex;align-items:center;justify-content:space-between;
-  height:64px;
-  background:rgba(10,12,16,.82);
+  height:60px;
+  background:rgba(10,12,16,.88);
   backdrop-filter:blur(20px);
   -webkit-backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
 }
 .nav-brand{
-  font-family:var(--display);font-size:1.05rem;font-weight:700;
-  letter-spacing:-.01em;display:flex;align-items:center;gap:10px;
+  font-family:var(--display);font-size:1rem;font-weight:700;
+  letter-spacing:-.01em;display:flex;align-items:center;gap:9px;
 }
 .nav-dot{
   width:7px;height:7px;border-radius:50%;background:var(--accent);
   box-shadow:0 0 8px rgba(var(--accent-rgb),.6);
-  animation:blink 3s ease-in-out infinite;
+  animation:blink 3s ease-in-out infinite;flex-shrink:0;
 }
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.nav-links{display:flex;gap:6px}
+.nav-links{display:flex;gap:2px}
 .nav-links a{
-  font-size:.82rem;color:var(--muted);padding:6px 13px;
-  border-radius:99px;font-family:var(--mono);letter-spacing:.02em;
+  font-size:.78rem;color:var(--muted);padding:6px 10px;
+  border-radius:99px;font-family:var(--mono);
   transition:color .15s,background .15s;
 }
 .nav-links a:hover{color:var(--text);background:rgba(255,255,255,.06)}
 
-/* HERO */
+/* ── HERO ── */
 #hero{
-  min-height:100vh;display:flex;flex-direction:column;
-  justify-content:flex-end;padding:120px 32px 80px;
+  min-height:100svh;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:clamp(90px,15vw,130px) clamp(16px,4vw,40px) clamp(48px,8vw,80px);
   position:relative;overflow:hidden;
 }
 .hero-bg-text{
   position:absolute;top:50%;left:50%;
   transform:translate(-50%,-50%);
   font-family:var(--display);
-  font-size:clamp(120px,20vw,260px);
+  font-size:clamp(80px,18vw,260px);
   font-weight:800;color:transparent;
   -webkit-text-stroke:1px rgba(255,255,255,.04);
   white-space:nowrap;pointer-events:none;user-select:none;
   letter-spacing:-.04em;line-height:1;
 }
-.hero-inner{
-  max-width:var(--max);margin:0 auto;width:100%;
-  display:grid;grid-template-columns:1fr auto;
-  align-items:flex-end;gap:40px;
-}
+.hero-content{max-width:var(--max);margin:0 auto;width:100%}
 .hero-tag{
-  font-family:var(--mono);font-size:.72rem;color:var(--accent);
-  letter-spacing:.12em;text-transform:uppercase;margin-bottom:28px;
-  display:flex;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:clamp(.65rem,.8rem + .1vw,.75rem);
+  color:var(--accent);letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:clamp(18px,3vw,28px);
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
 }
-.hero-tag::before{content:'';width:32px;height:1px;background:var(--accent)}
+.hero-tag::before{content:'';width:24px;height:1px;background:var(--accent);flex-shrink:0}
 h1{
   font-family:var(--display);
-  font-size:clamp(2.8rem,6vw,5.2rem);
+  font-size:clamp(2.6rem,8vw,5.2rem);
   font-weight:800;line-height:1.03;letter-spacing:-.04em;
-  color:#fff;margin-bottom:28px;
+  color:#fff;margin-bottom:clamp(16px,3vw,28px);
 }
-h1 em{font-style:normal;color:var(--accent);display:inline-block}
+h1 em{font-style:normal;color:var(--accent)}
 .hero-desc{
-  font-size:1rem;color:var(--muted);max-width:500px;
-  line-height:1.8;margin-bottom:40px;
+  font-size:clamp(.9rem,1rem + .1vw,1.05rem);
+  color:var(--muted);max-width:520px;line-height:1.8;
+  margin-bottom:clamp(28px,4vw,40px);
 }
-.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
-.btn{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:13px 22px;border-radius:99px;font-size:.85rem;font-weight:500;
-  border:1px solid var(--border2);transition:all .18s;cursor:pointer;white-space:nowrap;
-}
-.btn:hover{transform:translateY(-1px)}
-.btn-accent{
-  background:var(--accent);color:var(--ink);border-color:transparent;font-weight:600;
-}
-.btn-accent:hover{background:#f0ff6a;box-shadow:0 0 30px rgba(var(--accent-rgb),.3)}
-.btn-outline{background:transparent;color:var(--text)}
-.btn-outline:hover{background:rgba(255,255,255,.06)}
-.hero-right{
-  display:flex;flex-direction:column;gap:10px;
-  align-items:flex-end;padding-bottom:6px;
+.hero-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:clamp(36px,6vw,56px)}
+
+/* STAT CARDS — horizontal scroll on tiny screens */
+.hero-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
 }
 .hero-stat{
-  display:flex;align-items:center;gap:12px;
   background:var(--surface);border:1px solid var(--border);
-  border-radius:var(--r);padding:14px 18px;min-width:200px;
+  border-radius:var(--r);padding:clamp(12px,2vw,18px);
   transition:border-color .2s;
 }
 .hero-stat:hover{border-color:var(--border2)}
 .hero-stat-num{
-  font-family:var(--display);font-size:1.6rem;font-weight:800;
-  color:#fff;line-height:1;
+  font-family:var(--display);font-weight:800;color:#fff;
+  line-height:1;margin-bottom:5px;
+  font-size:clamp(1.1rem,2.5vw,1.6rem);
 }
-.hero-stat-label{font-size:.75rem;color:var(--muted);line-height:1.4;font-family:var(--mono)}
-.hero-stat-accent{color:var(--accent)}
+.hsn-accent{color:var(--accent)}
+.hero-stat-label{font-size:clamp(.68rem,.75rem,.82rem);color:var(--muted);line-height:1.45;font-family:var(--mono)}
+
+/* SCROLL HINT */
 .scroll-hint{
-  position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:8px;
-  opacity:.3;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;
-  color:var(--muted);animation:float 2s ease-in-out infinite;
+  position:absolute;bottom:24px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  opacity:.25;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;color:var(--muted);
+  animation:float 2s ease-in-out infinite;
 }
 @keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(5px)}}
-.scroll-hint svg{width:16px;height:16px;stroke:var(--muted)}
+.scroll-hint svg{width:14px;height:14px;stroke:var(--muted)}
+
+/* BUTTONS */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:clamp(10px,1.5vw,13px) clamp(16px,2vw,22px);
+  border-radius:99px;font-size:clamp(.8rem,.88rem,.92rem);font-weight:500;
+  border:1px solid var(--border2);transition:all .18s;cursor:pointer;white-space:nowrap;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-accent{background:var(--accent);color:var(--ink);border-color:transparent;font-weight:700}
+.btn-accent:hover{background:#f0ff6a;box-shadow:0 0 28px rgba(var(--accent-rgb),.28)}
+.btn-outline{background:transparent;color:var(--text)}
+.btn-outline:hover{background:rgba(255,255,255,.06)}
 
 /* SECTIONS */
-section{padding:100px 0;position:relative}
+section{padding:clamp(60px,8vw,100px) 0;position:relative}
 .section-line{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--border2),transparent)}
-.section-header{margin-bottom:64px}
+.section-header{margin-bottom:clamp(36px,5vw,64px)}
 .s-tag{
-  font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--muted);margin-bottom:16px;
-  display:flex;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:12px;
+  display:flex;align-items:center;gap:8px;
 }
-.s-tag::before{content:'';width:20px;height:1px;background:var(--faint)}
+.s-tag::before{content:'';width:16px;height:1px;background:var(--faint);flex-shrink:0}
 h2{
-  font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.8rem);
+  font-family:var(--display);font-size:clamp(1.6rem,3.5vw,2.8rem);
   font-weight:700;letter-spacing:-.03em;color:#fff;line-height:1.1;
 }
-.s-lead{margin-top:14px;font-size:.98rem;color:var(--muted);max-width:520px;line-height:1.8}
+.s-lead{margin-top:12px;font-size:clamp(.88rem,.96rem,1rem);color:var(--muted);max-width:520px;line-height:1.8}
 
 /* EXPERIENCE */
-.exp-top{
-  display:grid;grid-template-columns:1fr 1fr;gap:24px;
-  margin-bottom:32px;align-items:start;
+.exp-meta{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;margin-bottom:20px;
 }
-.exp-title-block h3{
-  font-family:var(--display);font-size:1.5rem;font-weight:700;
-  color:#fff;letter-spacing:-.02em;line-height:1.2;margin-bottom:10px;
+.exp-org-name{
+  font-family:var(--display);font-size:clamp(1.1rem,2.5vw,1.5rem);
+  font-weight:700;color:#fff;letter-spacing:-.02em;line-height:1.2;margin-bottom:8px;
 }
-.exp-org{
-  display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);
-  font-size:.73rem;color:var(--accent);letter-spacing:.06em;
+.exp-org-label{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--mono);font-size:.72rem;color:var(--accent);letter-spacing:.06em;
 }
-.exp-period{font-family:var(--mono);font-size:.72rem;color:var(--faint);text-align:right;padding-top:6px}
-.exp-desc{font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:40px;max-width:680px}
+.exp-period{font-family:var(--mono);font-size:.72rem;color:var(--faint);white-space:nowrap}
+.exp-desc{font-size:clamp(.88rem,.95rem,1rem);color:var(--muted);line-height:1.8;margin-bottom:clamp(24px,4vw,40px);max-width:680px}
 
-/* IMPACT */
+/* IMPACT ROW */
 .impact-row{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:2px;
-  margin-bottom:40px;border-radius:var(--r);overflow:hidden;border:1px solid var(--border);
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:2px;margin-bottom:clamp(24px,4vw,40px);
+  border-radius:var(--r);overflow:hidden;border:1px solid var(--border);
 }
 .impact-item{
-  background:var(--surface);padding:24px 20px;text-align:center;
-  border-right:1px solid var(--border);transition:background .18s;
+  background:var(--surface);padding:clamp(16px,2.5vw,24px) clamp(14px,2vw,20px);
+  text-align:center;border-right:1px solid var(--border);
+  border-bottom:1px solid var(--border);transition:background .18s;
 }
-.impact-item:last-child{border-right:none}
+.impact-item:nth-child(2n){border-right:none}
+.impact-item:nth-last-child(-n+2){border-bottom:none}
 .impact-item:hover{background:#1c1f27}
 .impact-num{
-  font-family:var(--display);font-size:2rem;font-weight:800;
-  color:var(--accent);line-height:1;margin-bottom:6px;
+  font-family:var(--display);font-size:clamp(1.2rem,3vw,2rem);
+  font-weight:800;color:var(--accent);line-height:1;margin-bottom:5px;
 }
-.impact-text{font-size:.75rem;color:var(--muted);line-height:1.5;font-family:var(--mono)}
+.impact-text{font-size:clamp(.68rem,.74rem,.8rem);color:var(--muted);line-height:1.5;font-family:var(--mono)}
 
 /* MISSIONS */
 .missions{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
-  border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:10px;margin-bottom:clamp(24px,4vw,40px);
 }
 .mission{
-  background:var(--surface);padding:22px;
-  border-right:1px solid var(--border);border-bottom:1px solid var(--border);
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r);padding:clamp(16px,2vw,22px);
   transition:background .18s;
 }
 .mission:hover{background:#1c1f27}
-.mission:nth-child(3n){border-right:none}
-.mission:nth-child(n+4){border-bottom:none}
-.mission-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.mission-head{display:flex;align-items:center;gap:9px;margin-bottom:8px}
 .mission-icon{
-  width:28px;height:28px;border-radius:6px;
+  width:26px;height:26px;border-radius:6px;
   background:rgba(var(--accent-rgb),.1);
   display:flex;align-items:center;justify-content:center;
-  font-size:13px;flex-shrink:0;
+  font-size:12px;flex-shrink:0;
 }
 .mission-title{font-weight:500;font-size:.88rem;color:#fff}
-.mission p{font-size:.83rem;color:var(--muted);line-height:1.65}
+.mission p{font-size:.82rem;color:var(--muted);line-height:1.65}
 
 /* IMAGES */
-.img-duo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.img-duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
 .img-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--border)}
-.img-card img{width:100%;height:220px;object-fit:cover;display:block;transition:transform .4s ease}
+.img-card img{width:100%;height:clamp(160px,25vw,220px);object-fit:cover;display:block;transition:transform .4s ease}
 .img-card:hover img{transform:scale(1.03)}
-.img-cap{
-  padding:12px 16px;font-family:var(--mono);font-size:.7rem;
-  color:var(--faint);border-top:1px solid var(--border);background:var(--surface);
-}
+.img-cap{padding:10px 14px;font-family:var(--mono);font-size:.68rem;color:var(--faint);border-top:1px solid var(--border);background:var(--surface)}
 
 /* PROJETS */
-.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}
 .pcard{
   background:var(--surface);border:1px solid var(--border);
-  border-radius:var(--r);padding:28px;
-  display:flex;flex-direction:column;gap:14px;
+  border-radius:var(--r);padding:clamp(18px,2.5vw,28px);
+  display:flex;flex-direction:column;gap:12px;
   transition:border-color .2s,transform .2s;
   position:relative;overflow:hidden;
 }
 .pcard::before{
   content:'';position:absolute;inset:0;
-  background:radial-gradient(600px at var(--mx,50%) var(--my,50%),rgba(var(--accent-rgb),.04),transparent 50%);
+  background:radial-gradient(500px at var(--mx,50%) var(--my,50%),rgba(var(--accent-rgb),.05),transparent 50%);
   pointer-events:none;opacity:0;transition:opacity .3s;
 }
-.pcard:hover{border-color:rgba(var(--accent-rgb),.25);transform:translateY(-3px)}
+.pcard:hover{border-color:rgba(var(--accent-rgb),.25);transform:translateY(-2px)}
 .pcard:hover::before{opacity:1}
-.p-tags{display:flex;flex-wrap:wrap;gap:6px}
+.p-tags{display:flex;flex-wrap:wrap;gap:5px}
 .p-tag{
-  font-family:var(--mono);font-size:.67rem;letter-spacing:.06em;color:var(--accent);
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;color:var(--accent);
   background:rgba(var(--accent-rgb),.1);border:1px solid rgba(var(--accent-rgb),.2);
-  border-radius:99px;padding:3px 10px;
+  border-radius:99px;padding:3px 9px;
 }
 .pcard h3{
-  font-family:var(--display);font-size:1.05rem;font-weight:700;
-  color:#fff;line-height:1.25;letter-spacing:-.01em;
+  font-family:var(--display);font-size:clamp(.95rem,1.1rem,1.15rem);
+  font-weight:700;color:#fff;line-height:1.25;letter-spacing:-.01em;
 }
-.pcard p{font-size:.86rem;color:var(--muted);line-height:1.7;flex:1}
-.p-links{display:flex;gap:8px;flex-wrap:wrap}
+.pcard p{font-size:.84rem;color:var(--muted);line-height:1.7;flex:1}
+.p-links{display:flex;gap:7px;flex-wrap:wrap}
 .p-link{
-  font-family:var(--mono);font-size:.73rem;padding:7px 14px;
+  font-family:var(--mono);font-size:.72rem;padding:7px 13px;
   border-radius:99px;border:1px solid var(--border2);color:var(--muted);
   transition:color .15s,border-color .15s;
 }
 .p-link:hover{color:var(--accent);border-color:rgba(var(--accent-rgb),.4)}
-.p-link.prim{background:var(--accent);color:var(--ink);border-color:transparent;font-weight:600}
-.p-link.prim:hover{background:#f0ff6a;color:var(--ink)}
+.p-link.prim{background:var(--accent);color:var(--ink);border-color:transparent;font-weight:700}
+.p-link.prim:hover{background:#f0ff6a}
 
-/* SKILLS */
-.skills-table-wrap{border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
-table{width:100%;border-collapse:collapse}
-thead th{
-  background:rgba(255,255,255,.03);font-family:var(--mono);font-size:.68rem;
-  letter-spacing:.1em;text-transform:uppercase;color:var(--faint);
-  padding:13px 22px;text-align:left;font-weight:400;border-bottom:1px solid var(--border);
+/* COMPÉTENCES — cartes sur mobile, tableau sur desktop */
+.skills-cards{display:flex;flex-direction:column;gap:10px}
+.skill-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r);padding:clamp(16px,2.5vw,22px);
+  transition:background .18s;
 }
-tbody td{
-  padding:18px 22px;font-size:.86rem;color:var(--muted);
-  border-bottom:1px solid var(--border);vertical-align:top;line-height:1.65;
+.skill-card:hover{background:#1c1f27}
+.skill-card-name{
+  font-family:var(--display);font-weight:700;font-size:.95rem;
+  color:var(--accent);margin-bottom:6px;
 }
-tbody tr:last-child td{border-bottom:none}
-tbody tr:hover td{background:var(--surface)}
-.td-name{font-family:var(--display);font-weight:700;font-size:.9rem;color:#fff !important}
+.skill-card-what{font-size:.85rem;color:var(--text);line-height:1.65;margin-bottom:8px}
+.skill-card-tools{
+  display:flex;flex-wrap:wrap;gap:5px;
+}
+.skill-tool-tag{
+  font-family:var(--mono);font-size:.68rem;color:var(--muted);
+  background:rgba(255,255,255,.05);border:1px solid var(--border2);
+  border-radius:99px;padding:3px 9px;
+}
 
 /* TOOLS */
 .tools-grid{display:flex;flex-wrap:wrap;gap:8px}
 .tool{
-  display:inline-flex;align-items:center;gap:7px;
+  display:inline-flex;align-items:center;gap:6px;
   background:var(--surface);border:1px solid var(--border);
-  border-radius:var(--r);padding:10px 16px;
-  font-size:.83rem;color:var(--muted);font-family:var(--mono);
+  border-radius:var(--r);padding:9px 14px;
+  font-size:.82rem;color:var(--muted);font-family:var(--mono);
   transition:border-color .15s,color .15s,background .15s;
 }
 .tool:hover{border-color:rgba(var(--accent-rgb),.35);color:var(--text);background:#1c1f27}
-.tool-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);opacity:.5}
+.tool-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);opacity:.5;flex-shrink:0}
 
 /* VISION */
-.vision-row{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
-  border:1px solid var(--border);border-radius:var(--r);overflow:hidden;
-}
+.vision-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
 .v-card{
-  background:var(--surface);padding:32px 28px;
-  border-right:1px solid var(--border);transition:background .18s;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r);padding:clamp(20px,3vw,32px) clamp(18px,2.5vw,28px);
+  transition:background .18s;
 }
-.v-card:last-child{border-right:none}
 .v-card:hover{background:#1c1f27}
 .v-num{
-  font-family:var(--mono);font-size:3rem;font-weight:500;
-  color:rgba(var(--accent-rgb),.15);line-height:1;margin-bottom:12px;
+  font-family:var(--mono);font-size:2.5rem;font-weight:500;
+  color:rgba(var(--accent-rgb),.15);line-height:1;margin-bottom:10px;
 }
-.v-card h3{font-family:var(--display);font-size:1rem;font-weight:700;color:#fff;margin-bottom:14px}
+.v-card h3{font-family:var(--display);font-size:.98rem;font-weight:700;color:#fff;margin-bottom:12px}
 .v-card ul{list-style:none;padding:0}
 .v-card li{
-  font-size:.83rem;color:var(--muted);padding:5px 0;
+  font-size:.82rem;color:var(--muted);padding:4px 0;
   padding-left:14px;position:relative;line-height:1.55;
 }
 .v-card li::before{content:'→';position:absolute;left:0;color:var(--faint);font-size:.75rem}
 
 /* CONTACT */
 #contact{background:var(--ink2);border-top:1px solid var(--border)}
-.contact-grid{display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:clamp(24px,5vw,60px);
+  align-items:center;
+}
 .contact-headline{
-  font-family:var(--display);font-size:clamp(2rem,4vw,3.2rem);font-weight:800;
-  color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:16px;
+  font-family:var(--display);font-size:clamp(1.6rem,4vw,3.2rem);
+  font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:14px;
 }
 .contact-headline span{color:var(--accent)}
-.contact-sub{font-size:.95rem;color:var(--muted);max-width:480px;line-height:1.8}
-.contact-btns{display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.contact-sub{font-size:clamp(.88rem,.95rem,1rem);color:var(--muted);max-width:460px;line-height:1.8}
+.contact-btns{display:flex;flex-direction:column;gap:9px;align-items:flex-end}
 
 /* FOOTER */
 footer{
-  border-top:1px solid var(--border);padding:24px 32px;
-  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+  border-top:1px solid var(--border);padding:20px clamp(16px,4vw,40px);
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
 }
-footer p{font-family:var(--mono);font-size:.72rem;color:var(--faint)}
+footer p{font-family:var(--mono);font-size:.7rem;color:var(--faint)}
 
 /* REVEAL */
 .reveal{
-  opacity:0;transform:translateY(28px);
-  transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1);
+  opacity:0;transform:translateY(22px);
+  transition:opacity .55s cubic-bezier(.16,1,.3,1),transform .55s cubic-bezier(.16,1,.3,1);
 }
 .reveal.visible{opacity:1;transform:none}
 
-/* RESPONSIVE */
-@media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr;gap:40px}
-  .hero-right{align-items:flex-start;flex-direction:row;flex-wrap:wrap}
-  .impact-row{grid-template-columns:repeat(2,1fr)}
-  .missions{grid-template-columns:repeat(2,1fr)}
-  .mission:nth-child(3n){border-right:1px solid var(--border)}
-  .mission:nth-child(2n){border-right:none}
-  .projects{grid-template-columns:1fr}
-  .vision-row{grid-template-columns:1fr}
-  .v-card{border-right:none;border-bottom:1px solid var(--border)}
-  .v-card:last-child{border-bottom:none}
+/* ── RESPONSIVE BREAKPOINTS ── */
+
+/* Tablette (≤768px) */
+@media(max-width:768px){
+  .nav-links a:nth-child(n+4){display:none}
   .contact-grid{grid-template-columns:1fr}
   .contact-btns{align-items:flex-start;flex-direction:row;flex-wrap:wrap}
-  .exp-top{grid-template-columns:1fr}
-  .exp-period{text-align:left}
 }
-@media(max-width:640px){
-  nav{padding:0 20px}
+
+/* Mobile (≤560px) */
+@media(max-width:560px){
   .nav-links{display:none}
-  #hero{padding:100px 20px 70px}
-  .wrap{padding:0 20px}
-  .impact-row{grid-template-columns:repeat(2,1fr)}
-  .missions{grid-template-columns:1fr}
-  .mission{border-right:none}
-  .img-duo{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .hero-stats .hero-stat:last-child{grid-column:span 2}
+  .exp-meta{flex-direction:column;gap:6px}
+  .exp-period{align-self:flex-start}
+}
+
+/* Très petit (≤380px) */
+@media(max-width:380px){
+  .hero-stats{grid-template-columns:1fr}
+  .hero-stats .hero-stat:last-child{grid-column:span 1}
+  .btn{padding:10px 14px;font-size:.78rem}
 }
 </style>
 </head>
@@ -387,36 +398,33 @@ footer p{font-family:var(--mono);font-size:.72rem;color:var(--faint)}
   </div>
 </nav>
 
+<!-- HERO -->
 <section id="hero">
   <div class="hero-bg-text" aria-hidden="true">DATA</div>
-  <div class="hero-inner">
-    <div>
-      <div class="hero-tag">Data Analyst Junior · Paris · Disponible sept. 2026</div>
-      <h1>Abou<br><em>Diop.</em></h1>
-      <p class="hero-desc">
-        3 ans à produire des dashboards décisionnels au Ministère des Armées. Je transforme des données complexes en indicateurs lisibles qui servent vraiment les équipes.
-      </p>
-      <div class="hero-ctas">
-        <a href="CV_Data_diop.pdf" class="btn btn-accent">
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 2v8M5 7l3 3 3-3M3 13h10"/></svg>
-          Télécharger le CV
-        </a>
-        <a href="https://www.linkedin.com/in/abou-diop-5aba9b26b/" target="_blank" rel="noreferrer" class="btn btn-outline">LinkedIn</a>
-        <a href="https://github.com/abou750" target="_blank" rel="noreferrer" class="btn btn-outline">GitHub</a>
-      </div>
+  <div class="hero-content">
+    <div class="hero-tag">Data Analyst Junior · Paris · Disponible sept. 2026</div>
+    <h1>Abou<br><em>Diop.</em></h1>
+    <p class="hero-desc">3 ans à produire des dashboards décisionnels au Ministère des Armées. Je transforme des données complexes en indicateurs lisibles qui servent vraiment les équipes.</p>
+    <div class="hero-ctas">
+      <a href="CV_Data_diop.pdf" class="btn btn-accent">
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 2v8M5 7l3 3 3-3M3 13h10"/></svg>
+        Télécharger le CV
+      </a>
+      <a href="https://www.linkedin.com/in/abou-diop-5aba9b26b/" target="_blank" rel="noreferrer" class="btn btn-outline">LinkedIn</a>
+      <a href="https://github.com/abou750" target="_blank" rel="noreferrer" class="btn btn-outline">GitHub</a>
     </div>
-    <div class="hero-right">
+    <div class="hero-stats">
       <div class="hero-stat">
-        <div class="hero-stat-num hero-stat-accent">3</div>
-        <div class="hero-stat-label">ans d'expérience<br>institutionnelle</div>
+        <div class="hero-stat-num hsn-accent">3 ans</div>
+        <div class="hero-stat-label">expérience institutionnelle</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num" style="font-size:1.1rem;font-weight:700;color:#fff">SGGN</div>
-        <div class="hero-stat-label">Ministère<br>des Armées</div>
+        <div class="hero-stat-num" style="font-size:clamp(.9rem,1.8vw,1.1rem)">SGGN</div>
+        <div class="hero-stat-label">Ministère des Armées</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num" style="font-size:1rem;font-weight:700;color:#fff">SQL · BI</div>
-        <div class="hero-stat-label">Qlik · Tableau<br>Metabase</div>
+        <div class="hero-stat-num" style="font-size:clamp(.85rem,1.6vw,1rem)">SQL · BI</div>
+        <div class="hero-stat-label">Qlik · Tableau · Metabase</div>
       </div>
     </div>
   </div>
@@ -428,6 +436,7 @@ footer p{font-family:var(--mono);font-size:.72rem;color:var(--faint)}
 
 <div class="section-line"></div>
 
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="wrap">
     <div class="section-header reveal">
@@ -435,83 +444,70 @@ footer p{font-family:var(--mono);font-size:.72rem;color:var(--faint)}
       <h2>Chargé de mission<br>Data Analyst</h2>
       <p class="s-lead">Poste opérationnel en environnement institutionnel exigeant. Dashboards et analyses utilisés directement en instance de direction.</p>
     </div>
-    <div class="exp-top reveal">
-      <div class="exp-title-block">
-        <h3>Secrétariat Général<br>de la Garde Nationale</h3>
-        <div class="exp-org">Ministère des Armées</div>
+
+    <div class="exp-meta reveal">
+      <div>
+        <div class="exp-org-name">Secrétariat Général<br>de la Garde Nationale</div>
+        <div class="exp-org-label">Ministère des Armées</div>
       </div>
       <div class="exp-period">2023 — 2026</div>
     </div>
+
     <p class="exp-desc reveal">Maintenance et amélioration d'un infocentre Qlik Sense en production, conception de dashboards décisionnels pour des hauts responsables, production de rapports analytiques diffusés en instances ministérielles.</p>
+
     <div class="impact-row reveal">
       <div class="impact-item">
         <div class="impact-num">3 ans</div>
-        <div class="impact-text">expérience<br>institutionnelle</div>
+        <div class="impact-text">expérience institutionnelle</div>
       </div>
       <div class="impact-item">
         <div class="impact-num">Qlik</div>
-        <div class="impact-text">infocentre en<br>production</div>
+        <div class="impact-text">infocentre en production</div>
       </div>
       <div class="impact-item">
         <div class="impact-num">Décideurs</div>
-        <div class="impact-text">dashboards pour<br>hauts responsables</div>
+        <div class="impact-text">dashboards hauts responsables</div>
       </div>
       <div class="impact-item">
         <div class="impact-num">APE</div>
-        <div class="impact-text">référentiel intégré<br>analyse sectorielle</div>
+        <div class="impact-text">référentiel intégré</div>
       </div>
     </div>
+
     <div class="missions reveal">
       <div class="mission">
-        <div class="mission-head">
-          <div class="mission-icon">📊</div>
-          <div class="mission-title">Dashboards décisionnels</div>
-        </div>
-        <p>Conception et déploiement de tableaux de bord interactifs Qlik Sense à destination de hauts responsables du Ministère.</p>
+        <div class="mission-head"><div class="mission-icon">📊</div><div class="mission-title">Dashboards décisionnels</div></div>
+        <p>Conception et déploiement de tableaux de bord Qlik Sense à destination de hauts responsables du Ministère.</p>
       </div>
       <div class="mission">
-        <div class="mission-head">
-          <div class="mission-icon">🔎</div>
-          <div class="mission-title">Analyse opérationnelle</div>
-        </div>
+        <div class="mission-head"><div class="mission-icon">🔎</div><div class="mission-title">Analyse opérationnelle</div></div>
         <p>Identification de tendances stratégiques à partir de données opérationnelles pour orienter la prise de décision.</p>
       </div>
       <div class="mission">
-        <div class="mission-head">
-          <div class="mission-icon">📝</div>
-          <div class="mission-title">Rapports analytiques</div>
-        </div>
+        <div class="mission-head"><div class="mission-icon">📝</div><div class="mission-title">Rapports analytiques</div></div>
         <p>Production de synthèses diffusées en instances décisionnelles du Ministère des Armées.</p>
       </div>
       <div class="mission">
-        <div class="mission-head">
-          <div class="mission-icon">⚙️</div>
-          <div class="mission-title">Fiabilisation des données</div>
-        </div>
+        <div class="mission-head"><div class="mission-icon">⚙️</div><div class="mission-title">Fiabilisation des données</div></div>
         <p>Correction de scripts de chargement, vérification de la cohérence des indicateurs en préproduction.</p>
       </div>
       <div class="mission">
-        <div class="mission-head">
-          <div class="mission-icon">🗂️</div>
-          <div class="mission-title">Enrichissement du modèle</div>
-        </div>
-        <p>Intégration d'un référentiel APE/SGDSN pour affiner l'analyse par secteur d'activité dans le modèle Qlik.</p>
+        <div class="mission-head"><div class="mission-icon">🗂️</div><div class="mission-title">Enrichissement du modèle</div></div>
+        <p>Intégration d'un référentiel APE/SGDSN pour affiner l'analyse sectorielle dans le modèle Qlik.</p>
       </div>
       <div class="mission">
-        <div class="mission-head">
-          <div class="mission-icon">📌</div>
-          <div class="mission-title">Pilotage & organisation</div>
-        </div>
+        <div class="mission-head"><div class="mission-icon">📌</div><div class="mission-title">Pilotage & organisation</div></div>
         <p>Gestion des tâches en méthode Kanban via Resana, participation à l'organisation d'événements institutionnels.</p>
       </div>
     </div>
+
     <div class="img-duo reveal">
       <div class="img-card">
-        <img src="modele_sggn.jpeg" alt="Modèle de données Qlik Sense SGGN"/>
+        <img src="modele_sggn.jpeg" alt="Modèle de données Qlik Sense SGGN" loading="lazy"/>
         <div class="img-cap">↳ Modèle de données Qlik Sense — liaison référentiel APE</div>
       </div>
       <div class="img-card">
-        <img src="dashboard_qlik.jpeg" alt="Dashboard Qlik Sense pilotage conventions"/>
+        <img src="dashboard_qlik.jpeg" alt="Dashboard Qlik Sense pilotage conventions" loading="lazy"/>
         <div class="img-cap">↳ Dashboard de pilotage des conventions — SGGN</div>
       </div>
     </div>
@@ -520,59 +516,40 @@ footer p{font-family:var(--mono);font-size:.72rem;color:var(--faint)}
 
 <div class="section-line"></div>
 
+<!-- PROJETS -->
 <section id="projets">
   <div class="wrap">
     <div class="section-header reveal">
       <div class="s-tag">Projets techniques</div>
       <h2>Ce que j'ai construit</h2>
-      <p class="s-lead">Quatre projets couvrant SQL, BI, datavisualisation et modélisation — choisis pour montrer la complémentarité de mes compétences.</p>
+      <p class="s-lead">Quatre projets couvrant SQL, BI, datavisualisation et modélisation.</p>
     </div>
     <div class="projects reveal">
-      <div class="pcard" id="pc1">
-        <div class="p-tags">
-          <span class="p-tag">Qlik Sense</span>
-          <span class="p-tag">Infocentre</span>
-          <span class="p-tag">BI</span>
-        </div>
+      <div class="pcard">
+        <div class="p-tags"><span class="p-tag">Qlik Sense</span><span class="p-tag">Infocentre</span><span class="p-tag">BI</span></div>
         <h3>Infocentre SGGN — Pilotage des conventions</h3>
-        <p>Maintenance et amélioration d'un infocentre Qlik Sense en production. Correction de scripts de chargement, intégration de référentiels externes, optimisation des indicateurs de performance pour des décideurs ministériels.</p>
-        <div class="p-links">
-          <span class="p-link" style="cursor:default;opacity:.5">Contexte institutionnel — accès restreint</span>
-        </div>
+        <p>Maintenance d'un infocentre Qlik Sense en production. Correction de scripts, intégration de référentiels externes, optimisation des indicateurs pour des décideurs ministériels.</p>
+        <div class="p-links"><span class="p-link" style="cursor:default;opacity:.5">Contexte institutionnel — accès restreint</span></div>
       </div>
-      <div class="pcard" id="pc2">
-        <div class="p-tags">
-          <span class="p-tag">Tableau</span>
-          <span class="p-tag">Dataviz</span>
-          <span class="p-tag">Analyse</span>
-        </div>
+      <div class="pcard">
+        <div class="p-tags"><span class="p-tag">Tableau</span><span class="p-tag">Dataviz</span><span class="p-tag">Analyse</span></div>
         <h3>Dataviz — Immobilier &amp; Transports</h3>
-        <p>Analyse de la corrélation entre marché immobilier et fréquentation des gares. Préparation et nettoyage de données hétérogènes, restitution visuelle sur Tableau Public.</p>
+        <p>Analyse de la corrélation entre marché immobilier et fréquentation des gares. Préparation de données hétérogènes et restitution visuelle sur Tableau Public.</p>
         <div class="p-links">
           <a href="Projet_dataviz1.pdf" class="p-link">PDF du projet</a>
           <a href="https://public.tableau.com/views/AbouNeilSelim/Existetilunerelationentrelimmobilieretlestransportsencommun" target="_blank" rel="noreferrer" class="p-link prim">Voir sur Tableau ↗</a>
         </div>
       </div>
-      <div class="pcard" id="pc3">
-        <div class="p-tags">
-          <span class="p-tag">SQL</span>
-          <span class="p-tag">NoSQL</span>
-          <span class="p-tag">Modélisation</span>
-        </div>
+      <div class="pcard">
+        <div class="p-tags"><span class="p-tag">SQL</span><span class="p-tag">NoSQL</span><span class="p-tag">Modélisation</span></div>
         <h3>SAE 502 — Migration SQL ⇄ NoSQL</h3>
-        <p>Conception et migration d'un modèle de données entre paradigmes SQL et NoSQL. Normalisation, dénormalisation, séparation entre logique métier et couche de persistance.</p>
+        <p>Conception et migration entre paradigmes SQL et NoSQL. Normalisation, dénormalisation, séparation logique métier et couche de persistance.</p>
       </div>
-      <div class="pcard" id="pc4">
-        <div class="p-tags">
-          <span class="p-tag">PostgreSQL</span>
-          <span class="p-tag">Metabase</span>
-          <span class="p-tag">Reporting</span>
-        </div>
+      <div class="pcard">
+        <div class="p-tags"><span class="p-tag">PostgreSQL</span><span class="p-tag">Metabase</span><span class="p-tag">Reporting</span></div>
         <h3>SAE 101 — SQL &amp; Reporting</h3>
-        <p>Mise en place d'un environnement d'analyse complet : base PostgreSQL, requêtage, extraction de données, dashboard dynamique Metabase connecté à la base.</p>
-        <div class="p-links">
-          <a href="SAE201_projet.pdf" class="p-link">Voir le rapport</a>
-        </div>
+        <p>Environnement d'analyse complet : base PostgreSQL, requêtage, extraction de données, dashboard dynamique Metabase connecté à la base.</p>
+        <div class="p-links"><a href="SAE201_projet.pdf" class="p-link">Voir le rapport</a></div>
       </div>
     </div>
   </div>
@@ -580,6 +557,7 @@ footer p{font-family:var(--mono);font-size:.72rem;color:var(--faint)}
 
 <div class="section-line"></div>
 
+<!-- COMPÉTENCES — cartes au lieu du tableau -->
 <section id="competences">
   <div class="wrap">
     <div class="section-header reveal">
@@ -587,49 +565,49 @@ footer p{font-family:var(--mono);font-size:.72rem;color:var(--faint)}
       <h2>Ce que je sais faire</h2>
       <p class="s-lead">Validées en situation réelle au Ministère des Armées et en projets techniques universitaires.</p>
     </div>
-    <div class="skills-table-wrap reveal">
-      <table>
-        <thead>
-          <tr>
-            <th style="width:180px">Domaine</th>
-            <th>Réalisations concrètes</th>
-            <th style="width:230px">Outils</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="td-name">Dashboards &amp; BI</td>
-            <td>Infocentre Qlik Sense en production pour le pilotage stratégique au SGGN. Dashboards à destination de hauts responsables.</td>
-            <td>Qlik Sense, Tableau, Metabase, Power BI</td>
-          </tr>
-          <tr>
-            <td class="td-name">Traitement des données</td>
-            <td>Fiabilisation de scripts de chargement en production, correction d'anomalies dans les sources, enrichissement par référentiels APE/SGDSN.</td>
-            <td>Qlik Sense scripting, Excel, Python</td>
-          </tr>
-          <tr>
-            <td class="td-name">SQL &amp; bases de données</td>
-            <td>Requêtage avancé, modélisation entité-association, migration SQL ⇄ NoSQL, conception complète de schémas relationnels.</td>
-            <td>PostgreSQL, MySQL, MongoDB</td>
-          </tr>
-          <tr>
-            <td class="td-name">Analyse &amp; reporting</td>
-            <td>Production de rapports analytiques diffusés en instances décisionnelles. Optimisation des indicateurs de performance et suivi d'activité.</td>
-            <td>Excel avancé, Python (pandas), Qlik Sense</td>
-          </tr>
-          <tr>
-            <td class="td-name">Datavisualisation</td>
-            <td>Restitution de données hétérogènes pour des publics non-techniques. Priorité à la lisibilité et l'utilité métier des indicateurs.</td>
-            <td>Tableau, Metabase, Qlik Sense</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="skills-cards reveal">
+      <div class="skill-card">
+        <div class="skill-card-name">Dashboards &amp; BI</div>
+        <div class="skill-card-what">Infocentre Qlik Sense en production pour le pilotage stratégique au SGGN. Dashboards à destination de hauts responsables du Ministère des Armées.</div>
+        <div class="skill-card-tools">
+          <span class="skill-tool-tag">Qlik Sense</span><span class="skill-tool-tag">Tableau</span><span class="skill-tool-tag">Metabase</span><span class="skill-tool-tag">Power BI</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-name">Traitement des données</div>
+        <div class="skill-card-what">Fiabilisation de scripts de chargement en production, correction d'anomalies dans les sources, enrichissement par référentiels externes APE/SGDSN.</div>
+        <div class="skill-card-tools">
+          <span class="skill-tool-tag">Qlik Sense scripting</span><span class="skill-tool-tag">Excel</span><span class="skill-tool-tag">Python</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-name">SQL &amp; bases de données</div>
+        <div class="skill-card-what">Requêtage avancé, modélisation entité-association, migration SQL ⇄ NoSQL, conception complète de schémas relationnels.</div>
+        <div class="skill-card-tools">
+          <span class="skill-tool-tag">PostgreSQL</span><span class="skill-tool-tag">MySQL</span><span class="skill-tool-tag">MongoDB</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-name">Analyse &amp; reporting</div>
+        <div class="skill-card-what">Production de rapports analytiques diffusés en instances décisionnelles. Optimisation des indicateurs de performance et suivi d'activité.</div>
+        <div class="skill-card-tools">
+          <span class="skill-tool-tag">Excel avancé</span><span class="skill-tool-tag">Python (pandas)</span><span class="skill-tool-tag">Qlik Sense</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-name">Datavisualisation</div>
+        <div class="skill-card-what">Restitution de données hétérogènes pour des publics non-techniques. Priorité à la lisibilité et à l'utilité métier des indicateurs.</div>
+        <div class="skill-card-tools">
+          <span class="skill-tool-tag">Tableau</span><span class="skill-tool-tag">Metabase</span><span class="skill-tool-tag">Qlik Sense</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <div class="section-line"></div>
 
+<!-- OUTILS -->
 <section id="outils">
   <div class="wrap">
     <div class="section-header reveal">
@@ -660,6 +638,7 @@ footer p{font-family:var(--mono);font-size:.72rem;color:var(--faint)}
 
 <div class="section-line"></div>
 
+<!-- VISION -->
 <section id="vision">
   <div class="wrap">
     <div class="section-header reveal">
@@ -667,7 +646,7 @@ footer p{font-family:var(--mono);font-size:.72rem;color:var(--faint)}
       <h2>Où je veux aller</h2>
       <p class="s-lead">Une progression structurée vers un profil Data Analyst autonome et stratégique.</p>
     </div>
-    <div class="vision-row reveal">
+    <div class="vision-grid reveal">
       <div class="v-card">
         <div class="v-num">01</div>
         <h3>Court terme</h3>
@@ -699,24 +678,21 @@ footer p{font-family:var(--mono);font-size:.72rem;color:var(--faint)}
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <div class="wrap">
     <div class="contact-grid reveal">
       <div>
         <div class="s-tag">Contact</div>
-        <div class="contact-headline">
-          Disponible à partir de<br><span>septembre 2026.</span>
-        </div>
-        <p class="contact-sub">
-          3 ans en environnement institutionnel exigeant, dashboards en production, SQL et BI. Je cherche à contribuer à une équipe data avec de vraies problématiques métier.
-        </p>
+        <div class="contact-headline">Disponible à partir de<br><span>septembre 2026.</span></div>
+        <p class="contact-sub">3 ans en environnement institutionnel exigeant, dashboards en production, SQL et BI. Je cherche à contribuer à une équipe data avec de vraies problématiques métier.</p>
       </div>
       <div class="contact-btns">
         <a href="mailto:aboudiop@icloud.com" class="btn btn-accent">aboudiop@icloud.com</a>
         <a href="https://www.linkedin.com/in/abou-diop-5aba9b26b/" target="_blank" rel="noreferrer" class="btn btn-outline">LinkedIn ↗</a>
         <a href="CV_Data_diop.pdf" class="btn btn-outline">
           <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 2v8M5 7l3 3 3-3M3 13h10"/></svg>
-          Télécharger le CV
+          CV
         </a>
       </div>
     </div>
@@ -733,10 +709,10 @@ const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
   });
-}, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+}, {threshold:0.08, rootMargin:'0px 0px -30px 0px'});
 
 document.querySelectorAll('.reveal').forEach((el,i) => {
-  el.style.transitionDelay = (i % 3 * 0.07) + 's';
+  el.style.transitionDelay = (i % 3 * 0.06) + 's';
   obs.observe(el);
 });
 
